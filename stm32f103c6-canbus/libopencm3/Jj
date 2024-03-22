@@ -1,0 +1,93 @@
+./tests/gadget-zero/main-tilm4f120xl.c:	gpio_set_output_config(GPIOF, GPIO_OTYPE_PP, GPIO_DRIVE_2MA, GPIO2);
+./tests/gadget-zero/main-tilm4f120xl.c:		gpio_set(GPIOF, GPIO2);
+./tests/gadget-zero/main-stm32f429i-disco.c:	gpio_set_af(GPIOB, GPIO_AF12, GPIO13 | GPIO14 | GPIO15);
+./tests/gadget-zero/main-stm32l1-generic.c:	gpio_set(GPIOB, GPIO8);
+./tests/gadget-zero/main-stm32l1-generic.c:		gpio_set(GPIOB, GPIO9);
+./tests/gadget-zero/main-stm32f4disco.c:	gpio_set_af(GPIOA, GPIO_AF10, GPIO11 | GPIO12);
+./tests/gadget-zero/main-stm32f3-disco.c:	gpio_set(GPIOE, GPIO12);
+./tests/gadget-zero/main-stm32f3-disco.c:	gpio_set_af(GPIOA, GPIO_AF14, GPIO11|GPIO12);
+./tests/gadget-zero/main-stm32f103-generic.c:	gpio_set_mode(GPIOC, GPIO_MODE_OUTPUT_2_MHZ,
+./tests/gadget-zero/main-stm32f103-generic.c:	gpio_set(GPIOC, GPIO13);
+./tests/gadget-zero/main-stm32f103-generic.c:	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_2_MHZ,
+./tests/gadget-zero/main-stm32f072disco.c:	gpio_set(GPIOC, GPIO7);
+./tests/gadget-zero/main-stm32l053disco.c:	gpio_set(GPIOA, GPIO5);
+./include/libopencm3/efm32/common/gpio_common_hglg.h:void gpio_set_drive_strength(uint32_t gpio_port,
+./include/libopencm3/efm32/common/gpio_common_hglg.h:void gpio_set(uint32_t gpio_port, uint16_t gpios);
+./include/libopencm3/efm32/common/gpio_common.h:void gpio_set_drive_strength(uint32_t gpio_port,
+./include/libopencm3/efm32/common/gpio_common.h:void gpio_set(uint32_t gpio_port, uint16_t gpios);
+./include/libopencm3/pac55xx/gpio.h:void gpio_set_outmask(uint32_t gpioport, bool enable, uint16_t gpios);
+./include/libopencm3/pac55xx/gpio.h:void gpio_set(uint32_t gpioport, uint16_t gpios);
+./include/libopencm3/pac55xx/gpio.h:void gpio_set_af(uint32_t gpioport, ccs_muxsel_func_t muxsel, uint16_t gpios);
+./include/libopencm3/pac55xx/gpio.h:void gpio_set_output_options(uint32_t gpioport, ccs_drive_strength_t strength,
+./include/libopencm3/pac55xx/gpio.h:void gpio_set_schmidt_trigger(uint32_t gpioport, bool enable, uint16_t gpios);
+./include/libopencm3/lpc43xx/gpio.h:void gpio_set(uint32_t gpioport, uint32_t gpios);
+./include/libopencm3/vf6xx/gpio.h:void gpio_set(uint32_t gpio);
+./include/libopencm3/lm4f/gpio.h:void gpio_set_output_config(uint32_t gpioport, enum gpio_output_type otype,
+./include/libopencm3/lm4f/gpio.h:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint8_t gpios);
+./include/libopencm3/lm4f/gpio.h:static inline void gpio_set(uint32_t gpioport, uint8_t gpios)
+./include/libopencm3/msp432/e4/gpio.h:void gpio_set_output_options(uint32_t gpioport, enum gpio_output_type otype,
+./include/libopencm3/msp432/e4/gpio.h:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint8_t gpios);
+./include/libopencm3/msp432/e4/gpio.h:void gpio_set(uint32_t gpioport, uint8_t gpios);
+./include/libopencm3/sam/d/port.h:void gpio_set_af(uint32_t gpioport, uint8_t af, uint32_t gpios);
+./include/libopencm3/sam/d/port.h:void gpio_set(uint32_t gpioport, uint32_t gpios);
+./include/libopencm3/sam/common/gpio_common_all.h:void gpio_set(uint32_t gpioport, uint32_t gpios);
+./include/libopencm3/lpc13xx/gpio.h:void gpio_set(uint32_t gpioport, uint16_t gpios);
+./include/libopencm3/nrf/common/gpio.h:void gpio_set(uint32_t gpioport, uint32_t gpios);
+./include/libopencm3/nrf/common/gpio.h:void gpio_set_options(uint32_t gpioport, uint32_t drive, uint32_t sense,
+./include/libopencm3/lm3s/gpio.h:void gpio_set(uint32_t gpioport, uint8_t gpios);
+./include/libopencm3/stm32/f1/gpio.h:void gpio_set_mode(uint32_t gpioport, uint8_t mode, uint8_t cnf,
+./include/libopencm3/stm32/f1/gpio.h:void gpio_set_eventout(uint8_t evoutport, uint8_t evoutpin);
+./include/libopencm3/stm32/common/gpio_common_all.h:void gpio_set(uint32_t gpioport, uint16_t gpios);
+./include/libopencm3/stm32/common/gpio_common_f234.h:void gpio_set_output_options(uint32_t gpioport, uint8_t otype, uint8_t speed,
+./include/libopencm3/stm32/common/gpio_common_f234.h:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint16_t gpios);
+./include/libopencm3/stm32/l1/gpio.h:void gpio_set_output_options(uint32_t gpioport, uint8_t otype, uint8_t speed,
+./include/libopencm3/stm32/l1/gpio.h:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint16_t gpios);
+./include/libopencm3/swm050/gpio.h:void gpio_set(uint16_t gpios);
+./include/libopencm3/lpc17xx/gpio.h:void gpio_set(uint32_t gpioport, uint32_t gpios);
+./HACKING:   subsystem name. For example, gpio_set_mode() or rcc_osc_on().
+./lib/efm32/common/gpio_common.c:void gpio_set_drive_strength(uint32_t gpio_port,
+./lib/efm32/common/gpio_common.c:void gpio_set(uint32_t gpio_port, uint16_t gpios)
+./lib/pac55xx/gpio.c:void gpio_set_outmask(uint32_t gpioport, bool enable, uint16_t gpios) {
+./lib/pac55xx/gpio.c:void gpio_set(uint32_t gpioport, uint16_t gpios) {
+./lib/pac55xx/gpio.c:void gpio_set_af(uint32_t gpioport, ccs_muxsel_func_t muxsel, uint16_t gpios) {
+./lib/pac55xx/gpio.c:void gpio_set_output_options(uint32_t gpioport, ccs_drive_strength_t strength,
+./lib/pac55xx/gpio.c:void gpio_set_schmidt_trigger(uint32_t gpioport, bool enable, uint16_t gpios) {
+./lib/lpc43xx/gpio.c:void gpio_set(uint32_t gpioport, uint32_t gpios)
+./lib/vf6xx/gpio.c:void gpio_set(uint32_t gpio)
+./lib/lm4f/gpio.c: * with @ref gpio_set_output_config().
+./lib/lm4f/gpio.c: * @ref gpio_set_output_config() controls different capabilities than the
+./lib/lm4f/gpio.c: * similar sounding gpio_set_output_options() from the STM GPIO API. They are
+./lib/lm4f/gpio.c: *	gpio_set_output_config(GPIOA, GPIO_OTYPE_PP, GPIO_DRIVE_8MA, GPIO2);
+./lib/lm4f/gpio.c: * @ref gpio_set_af(). Because AF0 is not used on the LM4F, passing 0 as the
+./lib/lm4f/gpio.c: *	gpio_set_af(GPIOB, 1, GPIO0 | GPIO1);
+./lib/lm4f/gpio.c:void gpio_set_output_config(uint32_t gpioport, enum gpio_output_type otype,
+./lib/lm4f/gpio.c:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint8_t gpios)
+./lib/lm4f/gpio.c: * Setting or clearing a group of bits can be accomplished with @ref gpio_set()
+./lib/lm4f/gpio.c: *	gpio_set(GPIOD, GPIO4);
+./lib/lm4f/gpio.c: *	gpio_set(GPIOD, GPIO4);
+./lib/msp432/e4/gpio.c:void gpio_set_output_options(uint32_t gpioport,
+./lib/msp432/e4/gpio.c:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint8_t gpios)
+./lib/msp432/e4/gpio.c:void gpio_set(uint32_t gpioport, uint8_t gpios)
+./lib/sam/d/port.c:void gpio_set_af(uint32_t gpioport, uint8_t af, uint32_t gpios)
+./lib/sam/d/port.c:void gpio_set(uint32_t gpioport, uint32_t gpios)
+./lib/sam/4l/gpio.c:void gpio_set(uint32_t gpioport, uint32_t gpios)
+./lib/sam/common/gpio_common_all.c:void gpio_set(uint32_t gpioport, uint32_t gpios)
+./lib/lpc13xx/gpio.c:void gpio_set(uint32_t gpioport, uint16_t gpios)
+./lib/nrf/common/gpio.c:void gpio_set(uint32_t gpioport, uint32_t gpios)
+./lib/nrf/common/gpio.c:void gpio_set_options(uint32_t gpioport, uint32_t drive, uint32_t sense,
+./lib/lm3s/gpio.c:void gpio_set(uint32_t gpioport, uint8_t gpios)
+./lib/stm32/f1/gpio.c:	gpio_set_mode(GPIOC, GPIO_MODE_OUTPUT_2_MHZ,
+./lib/stm32/f1/gpio.c:	gpio_set(GPIOC, GPIO2 | GPIO9);
+./lib/stm32/f1/gpio.c:	gpio_set_mode(GPIOC, GPIO_MODE_INPUT, GPIO_CNF_INPUT_FLOAT, GPIO12);
+./lib/stm32/f1/gpio.c:void gpio_set_mode(uint32_t gpioport, uint8_t mode, uint8_t cnf, uint16_t gpios)
+./lib/stm32/f1/gpio.c:void gpio_set_eventout(uint8_t evoutport, uint8_t evoutpin)
+./lib/stm32/common/gpio_common_all.c:void gpio_set(uint32_t gpioport, uint16_t gpios)
+./lib/stm32/common/gpio_common_f0234.c:	gpio_set_output_options(GPIOC, GPIO_OTYPE_PP,
+./lib/stm32/common/gpio_common_f0234.c:	gpio_set(GPIOC, GPIO2 | GPIO9);
+./lib/stm32/common/gpio_common_f0234.c:void gpio_set_output_options(uint32_t gpioport, uint8_t otype, uint8_t speed,
+./lib/stm32/common/gpio_common_f0234.c:void gpio_set_af(uint32_t gpioport, uint8_t alt_func_num, uint16_t gpios)
+./lib/stm32/common/dac_common_all.c:	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_50_MHZ,
+./lib/stm32/common/timer_common_all.c:	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO8);
+./lib/stm32/common/timer_common_all.c:	gpio_set_output_options(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO8);
+./lib/swm050/gpio.c:void gpio_set(uint16_t gpios)
+./lib/lpc17xx/gpio.c:void gpio_set(uint32_t gpioport, uint32_t gpios)

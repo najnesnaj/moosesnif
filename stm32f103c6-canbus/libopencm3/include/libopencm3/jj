@@ -1,0 +1,1 @@
+./usb/usbd.h:	USBD_REQ_NEXT_CALLBACK	= 2,

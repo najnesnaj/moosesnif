@@ -1,0 +1,4 @@
+./libopencm3/stm32/common/gpio_common_f234.h:#define GPIO_AF9			0x9
+./libopencm3/stm32/l1/gpio.h:#define GPIO_AF9                        0x9
+./libopencm3/stm32/jj:./common/gpio_common_f234.h:#define GPIO_AF9			0x9
+./libopencm3/stm32/jj:./l1/gpio.h:#define GPIO_AF9                        0x9
