@@ -54,7 +54,8 @@ namespace CAN {
 		{
 			{ CAN_BTR_TS1_13TQ, CAN_BTR_TS2_2TQ, 24}, //125kbps at 48 MHz
 				{ CAN_BTR_TS1_13TQ, CAN_BTR_TS2_2TQ, 12}, //250kbps at 48 MHz
-				{ CAN_BTR_TS1_13TQ, CAN_BTR_TS2_2TQ, 6 }, //500kbps at 48 MHz
+				//{ CAN_BTR_TS1_13TQ, CAN_BTR_TS2_2TQ, 6 }, //500kbps at 48 MHz
+				{ CAN_BTR_TS1_6TQ, CAN_BTR_TS2_1TQ, 9 }, //500kbps at 48 MHz
 				{ CAN_BTR_TS1_12TQ, CAN_BTR_TS2_2TQ, 4 }, //800kbps at 48 MHz
 				{ CAN_BTR_TS1_13TQ, CAN_BTR_TS2_2TQ, 3 }, //1000kbps at 48 MHz
 
@@ -120,7 +121,7 @@ namespace CAN {
 
 		/* Reset CAN. */
 		can_reset(CAN1);
-		SetBaudrate(Baud1000);//todo
+		SetBaudrate(Baud500);//todo
 		/* CAN cell init. */
 		printf("setting baudrate\n");
 		//		if (can_init(CAN1,
