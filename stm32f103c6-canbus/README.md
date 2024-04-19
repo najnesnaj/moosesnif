@@ -1,15 +1,5 @@
-# STM32 Programming with opencm3: Part 3
+# this software works with a cheap stm32f103c6 (should work for c8 equally well)
 
-This repository contains the complete companion code and KiCad design files
-to accompany
-[this blog post](https://rhye.org/post/stm32-with-opencm3-3-canbus/)
-which works through using the CAN Bus on an STM32 series MCU.
+the software reacts to a request on the canbus for ECM (0x50), and sends a serial number (works with DHA software and database and DICE cable)
 
-You can also check out the three previous posts in the series:
-
-- [Compiling and Uploading](https://rhye.org/post/stm32-with-opencm3-0-compiling-and-uploading/),
-- [Alternate Functions and USARTs](https://rhye.org/post/stm32-with-opencm3-1-usart-and-printf/)
-- [SPI and DMA](https://rhye.org/post/stm32-with-opencm3-2-spi-and-dma/)
-
-![Blink Blink](/img/demo_board_running.png?raw=true)
-
+With this method, modifying/completing the text-only database, allows for interacting with all the modules in your car 
