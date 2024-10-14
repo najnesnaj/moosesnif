@@ -1,0 +1,2620 @@
+.. container::
+
+   .. rubric:: CAN Protocol in STM32 Part-II. In Previous part we have
+      seen the brie…
+      :name: can-protocol-in-stm32-part-ii.-in-previous-part-we-have-seen-the-brie
+
+   |image0|\ archived 20 Dec 2023 12:11:32 UTC
+
+.. container::
+   :name: HEADER
+
+   .. container::
+
+   ` <https://archive.today/>`__
+
+   .. container::
+
+      archive.today
+
+   .. container::
+
+      webpage capture
+
+Saved from
+
++-----------------------------------+-----------------------------------+
+| .. container::                    |                                   |
+|                                   |                                   |
+|    no other snapshots from this   |                                   |
+|    url                            |                                   |
++-----------------------------------+-----------------------------------+
+
+20 Dec 2023 12:11:32 UTC
+All snapshots
+**from host** `medium.com <https://archive.ph/medium.com>`__
+`Webpage <https://archive.ph/CnMQt>`__\ `Screenshot <https://archive.ph/CnMQt/image>`__
+`|image1|\ share <https://archive.ph/CnMQt/share>`__\ `|image2|\ download
+.zip <https://archive.ph/download/CnMQt.zip>`__\ `|image3|\ report bug
+or abuse <https://archive.ph/CnMQt/abuse>`__\ `|image4|\ Buy me a
+coffee <http://liberapay.com/archiveis/donate>`__
+
+.. container::
+   :name: DIVSHARE
+
+   .. container::
+
+      .. container::
+
+         |image5|
+
+      .. container::
+
+         .. container::
+
+         .. container::
+
+            .. container::
+
+               .. container::
+
+                  Reddit
+
+               .. container::
+
+                  VKontakte
+
+               .. container::
+
+                  Twitter
+
+            .. container::
+
+               .. container::
+
+                  Pinboard
+
+               .. container::
+
+                  Livejournal
+
+      .. container::
+
+         .. container::
+
+            short link
+
+         .. container::
+
+      .. container::
+
+         .. container::
+
+            long link
+
+         .. container::
+
+      .. container::
+
+         .. container::
+
+            markdown
+
+         .. container::
+
+      .. container::
+
+         .. container::
+
+            html code
+
+         .. container::
+
+      .. container::
+
+         .. container::
+
+            wiki code
+
+         .. container::
+
+.. container::
+
+.. container::
+   :name: SOLID
+
+   .. container::
+      :name: CONTENT
+
+      .. container:: html1
+
+         .. container:: html
+
+            .. container:: body
+
+               .. container::
+                  :name: root
+
+                  .. container::
+
+                     .. container::
+
+                     .. container::
+
+                     .. container::
+
+                        .. container::
+
+                           .. container::
+
+                              Open in app
+
+                              .. container::
+
+                                 .. container::
+
+                                    Sign up
+
+                                 .. container::
+
+                                    .. container::
+
+                                       `Sign
+                                       in <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                           .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. container::
+
+                                       .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    ` <https://archive.ph/o/CnMQt/https://medium.com/new-story>`__
+
+                                    .. container::
+
+                                       .. container::
+
+                                          Write
+
+                              .. container::
+
+                                 .. container::
+
+                                    ` <https://archive.ph/o/CnMQt/https://medium.com/search>`__
+
+                                    .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       Sign up
+
+                                    .. container::
+
+                                       .. container::
+
+                                          `Sign
+                                          in <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                              .. container::
+
+                                 .. container::
+
+                                    |image6|
+
+                                    .. container::
+
+                        .. container::
+
+                           .. container::
+
+                              .. container::
+
+                              .. container::
+
+                           .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container:: section
+
+                                       .. container::
+
+                                          .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. rubric:: CAN
+                                                         Protocol in
+                                                         STM32 Part-II
+                                                         :name: de18
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    |Harshdixit|
+
+                                                                                    .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                                       .. container::
+
+                                                                                          .. container::
+
+                                                                                             `Harshdixit <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                                 ·
+
+                                                                                 .. container::
+
+                                                                                    `Follow <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              3
+                                                                              min
+                                                                              read
+
+                                                                              .. container::
+
+                                                                                 ·
+
+                                                                              Jun
+                                                                              11
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                                                                                    .. container::
+
+                                                                                       .. container::
+
+                                                                                          .. container::
+
+                                                                                             .. container::
+
+                                                                                                Listen
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    Share
+
+                                                   .. container::
+                                                      :name: 514a
+
+                                                      In Previous part
+                                                      we have seen the
+                                                      brief about CAN
+                                                      protocol how it
+                                                      get used and how
+                                                      it get implemented
+                                                      in the CAN
+                                                      peripheral and
+                                                      There CAN Tx and
+                                                      CAN Rx .
+
+                                                   .. container::
+                                                      :name: 5181
+
+                                                      We had seen that
+                                                      there are CAN
+                                                      Identifier
+                                                      RTR(Remote
+                                                      Transmission
+                                                      Request) IDE
+                                                      (Identifier ) for
+                                                      Standard ID or
+                                                      Extended ID
+
+                                                   .. container::
+                                                      :name: 35ef
+
+                                                      And Other part
+                                                      such as DLC (Data
+                                                      length) DataField
+                                                      CheckSum DEL CRC
+                                                      ACK DEL is the
+                                                      Acknowledgement
+                                                      part then EOF( End
+                                                      Of File)
+                                                      ITM(Interrupt
+                                                      manipulation) Bus
+                                                      Idle (Bus Matrix)
+
+                                                   .. container::
+                                                      :name: 0d3c
+
+                                                      . Here the **BAUD
+                                                      RATE** is set to
+                                                      500000bps. You can
+                                                      try different
+                                                      combinations for
+                                                      **Prescalar and
+                                                      Time Quanta** to
+                                                      achieve this.
+
+                                                   .. container::
+                                                      :name: fae9
+
+                                                      . The Operating
+                                                      Mode is **NORMAL
+                                                      Mode.**
+
+                                                   .. container::
+                                                      :name: 5f08
+
+                                                      . Pins are PA11
+                                                      and PA12 are set
+                                                      as **CAN_RX** and
+                                                      **CAN_TX**
+
+                                                   .. figure:: .//f2256d1836cefdeff74e991def20ae06f820e937.webp
+                                                      :alt: Circuitry
+                                                      Connection for CAN
+                                                      :width: 672px
+                                                      :height: 440px
+
+                                                      Circuitry
+                                                      Connection for CAN
+
+                                                   .. container::
+                                                      :name: c2dc
+
+                                                      Also there is
+                                                      **120 ohms
+                                                      Resistance** at
+                                                      each node. This is
+                                                      very important, or
+                                                      else you will not
+                                                      get the data.
+
+                                                   .. container::
+                                                      :name: c0bf
+
+                                                      in main.c USER
+                                                      BEGIN 0
+
+                                                   ::
+
+
+
+                                                      CAN_TxHeaderTypeDef TxHeader; // TxHeader Store information like RTR,DLC,etc.
+                                                      uint8_t TxData[8]; // To store the data, that we are going to transmit over the CAN bus
+                                                      uint32_t TxMailbox; // TxMailbox will sent to the CAN bus. 
+
+                                                   .. container::
+                                                      :name: 9a86
+
+                                                      Now we will store
+                                                      the required
+                                                      values in the
+                                                      TxHeader and in
+                                                      the TxData.
+
+                                                   ::
+
+                                                      TxHeader.IDE = CAN_ID_STD; // setting ID to Standard ID 
+                                                      TxHeader.StdId = 0x446; // Identifier
+                                                      TxHeader.RTR = CAN_RTR_DATA;// Setting Remote Transmission Request 
+                                                      TxHeader.DLC =2;//Data Length of Data bytes 
+
+                                                      TxData[0] = 50; 
+                                                      TxData[1] = 0xAA; 
+
+                                                   .. container::
+                                                      :name: f614
+
+                                                      Now we have the
+                                                      information ready
+                                                      to be transmitted
+                                                      now we will
+                                                      finally transmit
+                                                      it on the CAN bus.
+
+                                                   ::
+
+                                                      if( HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData,&TxMailbox) != HAL_OK)
+                                                                 Error_handle();
+
+                                                   .. figure:: .//fa5b722e93e579344e3ba73e1e08f8781e06fd20.webp
+                                                      :alt: As you can
+                                                      see the data here
+                                                      :width: 700px
+                                                      :height: 85px
+
+                                                      As you can see the
+                                                      data here
+
+                                                   .. rubric:: **Filter
+                                                      Configuration**
+                                                      :name: 1250
+
+                                                   .. container::
+                                                      :name: 0c5c
+
+                                                      In Order to reduce
+                                                      the CPU Load to
+                                                      filter out
+                                                      messages , the
+                                                      STM32 have the
+                                                      filters built
+                                                      inside the CAN
+                                                      peripheral.
+
+                                                   ::
+
+                                                      CAN_FilterTypeDef canfilterconfig;
+
+                                                      canfilterconfig.FilterActivation = CAN_FILTER_ENABLE;//we want to enable filter or not
+                                                      canfilterconfig.FilterBank = 18; // filter bank 20 in single can peri you can choose 0 to 13
+                                                      canfilterconfig.FilterFIFOAssignment = CAN_FILTER_FIFO0;// FIFO0 and FIFO1 so choosing it 
+                                                      canfilterconfig.FilterIdHigh = 0x446 << 5 ;// Register for 16 bits it compare to incoming identifier 
+                                                      canfilterconfig.FilterIdLow =0 ; // Register for 8 bit compare to identifier 
+                                                      canfilterconfig.FilterMaskIdHigh = 0x446 << 5;  // Masking the identifier it enable the comparison
+                                                      canfilterconfig.FilterMaskIdLow = 0x0000; // Masking the filter ID low 
+                                                      canfilterconfig.FilterMode = CAN_FILTERMODE_IDMASK; //MASK MODE in Filter in STM32 
+                                                      canfilterconfig.FilterScale = CAN_FILTERSCALE_32BIT;
+                                                      canfilterconfig.SlaveStartFilterBank = 20; // dual CAN peripheral have 28 Filter Banks
+
+                                                      HAL_CAN_ConfigFilter(&hscan1, &canfilterconfig);
+
+                                                   .. rubric:: RECEIVING
+                                                      DATA
+                                                      :name: 2330
+
+                                                   .. container::
+                                                      :name: 1933
+
+                                                      For recieving the
+                                                      data in STM32
+
+                                                   ::
+
+                                                        if (HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+                                                        {
+                                                         Error_Handler();
+                                                        }
+
+                                                   ::
+
+                                                      CAN_RxHeaderTypeDef   RxHeader;
+
+                                                      uint8_t               RxData[8];
+
+                                                      void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+                                                      {
+                                                        if (HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+                                                        {
+                                                          Error_Handler();
+                                                        }
+
+                                                        if ((RxHeader.StdId == 0x103))
+                                                        {
+                                                         datacheck = 1;
+                                                        }
+
+                                                   .. container::
+                                                      :name: cdd8
+
+                                                      you can use like
+                                                      this also and you
+                                                      can compare it to
+                                                      the Identifier of
+                                                      the RxHeader
+
+                                                   .. container::
+                                                      :name: 06ef
+
+                                                      if it is true you
+                                                      can turn on GPIO’s
+                                                      pin
+
+                                                   ::
+
+                                                      if (datacheck) { HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET); } // checking datacheck
+
+                              .. container::
+
+                                 .. container::
+
+                           .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/tag/can-protocol>`__
+
+                                       .. container::
+
+                                          Can Protocol
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/tag/can>`__
+
+                                       .. container::
+
+                                          Can
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/tag/vlsi>`__
+
+                                       .. container::
+
+                                          Vlsi
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/tag/embedded-systems>`__
+
+                                       .. container::
+
+                                          Embedded Systems
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/tag/software-engineering>`__
+
+                                       .. container::
+
+                                          Software Engineering
+
+                           .. container::
+
+                           .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2>`__
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                           .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. container::
+
+                                          ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                          .. container::
+
+                                             .. container::
+
+                                                |Harshdixit|
+
+                                                .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             Follow
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                    .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+                                             .. rubric:: Written by
+                                                Harshdixit
+                                                :name: written-by-harshdixit
+
+                                          .. container::
+
+                                             .. container::
+
+                                                `14
+                                                Followers <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/followers>`__
+
+                                          .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             Follow
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                    .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. rubric:: More from Harshdixit
+                                          :name: more-from-harshdixit
+
+                                    .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-97bac5a6f521>`__
+
+                                                            .. container::
+
+                                                               |CAN
+                                                               Protocol
+                                                               in STM32|
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           |Harshdixit|
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           Harshdixit
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-97bac5a6f521>`__
+
+                                                               .. container::
+
+                                                                  .. rubric:: CAN
+                                                                     Protocol
+                                                                     in
+                                                                     STM32
+                                                                     :name: can-protocol-in-stm32
+
+                                                               .. container::
+
+                                                                  .. rubric:: CAN(
+                                                                     Controlled
+                                                                     Area
+                                                                     Network
+                                                                     )
+                                                                     Protocol
+                                                                     is
+                                                                     a
+                                                                     way
+                                                                     of
+                                                                     communication
+                                                                     between
+                                                                     different
+                                                                     devices,
+                                                                     but
+                                                                     under
+                                                                     certain
+                                                                     rules.
+                                                                     These
+                                                                     rules
+                                                                     must
+                                                                     be…
+                                                                     :name: can-controlled-area-network-protocol-is-a-way-of-communication-between-different-devices-but-under-certain-rules.-these-rules-must-be
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-97bac5a6f521>`__
+
+                                                            .. container::
+
+                                                               5 min
+                                                               read·Jun
+                                                               9
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/can-protocol-in-stm32-97bac5a6f521>`__
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849>`__
+
+                                                            .. container::
+
+                                                               |Difference
+                                                               Between
+                                                               Reg And
+                                                               Wire In
+                                                               Verilog|
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           |Harshdixit|
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           Harshdixit
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849>`__
+
+                                                               .. container::
+
+                                                                  .. rubric:: Difference
+                                                                     Between
+                                                                     Reg
+                                                                     And
+                                                                     Wire
+                                                                     In
+                                                                     Verilog
+                                                                     :name: difference-between-reg-and-wire-in-verilog
+
+                                                               .. container::
+
+                                                                  .. rubric:: “Wire”
+                                                                     elements
+                                                                     must
+                                                                     be
+                                                                     continuously
+                                                                     driven
+                                                                     by
+                                                                     something,
+                                                                     and
+                                                                     cannot
+                                                                     store
+                                                                     a
+                                                                     value.
+                                                                     Henceforth,
+                                                                     they
+                                                                     are
+                                                                     assigned
+                                                                     values
+                                                                     using
+                                                                     continuous…
+                                                                     :name: wire-elements-must-be-continuously-driven-by-something-and-cannot-store-a-value.-henceforth-they-are-assigned-values-using-continuous
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849>`__
+
+                                                            .. container::
+
+                                                               2 min
+                                                               read·Mar
+                                                               16
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849>`__
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947>`__
+
+                                                            .. container::
+
+                                                               |RTOS
+                                                               Programming
+                                                               in Keil
+                                                               IDE for
+                                                               STM32F401RE|
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           |Harshdixit|
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           Harshdixit
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947>`__
+
+                                                               .. container::
+
+                                                                  .. rubric:: RTOS
+                                                                     Programming
+                                                                     in
+                                                                     Keil
+                                                                     IDE
+                                                                     for
+                                                                     STM32F401RE
+                                                                     :name: rtos-programming-in-keil-ide-for-stm32f401re
+
+                                                               .. container::
+
+                                                                  .. rubric:: Hi ,
+                                                                     In
+                                                                     previous
+                                                                     we
+                                                                     had
+                                                                     talk
+                                                                     about
+                                                                     the
+                                                                     RTOS
+                                                                     and
+                                                                     what
+                                                                     is
+                                                                     RTOS ?
+                                                                     and
+                                                                     what
+                                                                     are
+                                                                     its
+                                                                     type ?
+                                                                     :name: hi-in-previous-we-had-talk-about-the-rtos-and-what-is-rtos-and-what-are-its-type
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947>`__
+
+                                                            .. container::
+
+                                                               4 min
+                                                               read·Sep
+                                                               6
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947>`__
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a>`__
+
+                                                            .. container::
+
+                                                               |Coding
+                                                               Pulse
+                                                               width
+                                                               Modulation
+                                                               from
+                                                               microcontroller
+                                                               STM32F103C8Tx|
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           |Harshdixit|
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                                                        .. container::
+
+                                                                           Harshdixit
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a>`__
+
+                                                               .. container::
+
+                                                                  .. rubric:: Coding
+                                                                     Pulse
+                                                                     width
+                                                                     Modulation
+                                                                     from
+                                                                     microcontroller
+                                                                     STM32F103C8Tx
+                                                                     :name: coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx
+
+                                                               .. container::
+
+                                                                  .. rubric:: Read
+                                                                     my
+                                                                     first
+                                                                     article
+                                                                     before
+                                                                     jumping
+                                                                     to
+                                                                     this
+                                                                     article
+                                                                     and
+                                                                     also
+                                                                     take
+                                                                     out
+                                                                     your
+                                                                     pen
+                                                                     and
+                                                                     notes
+                                                                     with
+                                                                     me
+                                                                     to
+                                                                     calculate
+                                                                     frequencies ,
+                                                                     prescalar …
+                                                                     :name: read-my-first-article-before-jumping-to-this-article-and-also-take-out-your-pen-and-notes-with-me-to-calculate-frequencies-prescalar
+
+                                                            ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a>`__
+
+                                                            .. container::
+
+                                                               4 min
+                                                               read·Aug
+                                                               20
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a>`__
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                    .. container::
+
+                                    .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/@harshdixit1981>`__
+
+                                       .. container::
+
+                                          See all from Harshdixit
+
+                              .. container::
+
+                              .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. rubric:: Recommended from
+                                          Medium
+                                          :name: recommended-from-medium
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b>`__
+
+                                                                  .. container::
+
+                                                                     |Reviewing
+                                                                     My
+                                                                     Journey
+                                                                     Through
+                                                                     Embedded
+                                                                     Systems
+                                                                     So
+                                                                     Far|
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze>`__
+
+                                                                              .. container::
+
+                                                                                 |Kshitij
+                                                                                 Vaze|
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze>`__
+
+                                                                              .. container::
+
+                                                                                 Kshitij
+                                                                                 Vaze
+
+                                                                  .. container::
+
+                                                                     ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b>`__
+
+                                                                     .. container::
+
+                                                                        .. rubric:: Reviewing
+                                                                           My
+                                                                           Journey
+                                                                           Through
+                                                                           Embedded
+                                                                           Systems
+                                                                           So
+                                                                           Far
+                                                                           :name: reviewing-my-journey-through-embedded-systems-so-far
+
+                                                                     .. container::
+
+                                                                        .. rubric:: MY
+                                                                           JOURNEY
+                                                                           THROUGH
+                                                                           EMBEDDED
+                                                                           SYSTEMS
+                                                                           :name: my-journey-through-embedded-systems
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b>`__
+
+                                                                  .. container::
+
+                                                                     5
+                                                                     min
+                                                                     read·Oct
+                                                                     7
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 ` <https://archive.ph/o/CnMQt/https://medium.com/@kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b>`__
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                                       .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                                       2
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu/pointers-in-embedded-c-a7afa851c84a>`__
+
+                                                                  .. container::
+
+                                                                     |Pointers
+                                                                     in
+                                                                     Embedded
+                                                                     C|
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu>`__
+
+                                                                              .. container::
+
+                                                                                 |Shathira
+                                                                                 Lakdilu|
+
+                                                                                 .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu>`__
+
+                                                                              .. container::
+
+                                                                                 Shathira
+                                                                                 Lakdilu
+
+                                                                  .. container::
+
+                                                                     ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu/pointers-in-embedded-c-a7afa851c84a>`__
+
+                                                                     .. container::
+
+                                                                        .. rubric:: Pointers
+                                                                           in
+                                                                           Embedded
+                                                                           C
+                                                                           :name: pointers-in-embedded-c
+
+                                                                     .. container::
+
+                                                                        .. rubric:: Pointers
+                                                                           play
+                                                                           a
+                                                                           crucial
+                                                                           role
+                                                                           in
+                                                                           memory
+                                                                           management,
+                                                                           serving
+                                                                           as
+                                                                           variables
+                                                                           that
+                                                                           hold
+                                                                           the
+                                                                           address
+                                                                           of
+                                                                           another
+                                                                           variable
+                                                                           and
+                                                                           enabling
+                                                                           the…
+                                                                           :name: pointers-play-a-crucial-role-in-memory-management-serving-as-variables-that-hold-the-address-of-another-variable-and-enabling-the
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu/pointers-in-embedded-c-a7afa851c84a>`__
+
+                                                                  .. container::
+
+                                                                     3
+                                                                     min
+                                                                     read·Nov
+                                                                     6
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 ` <https://archive.ph/o/CnMQt/https://medium.com/@shathiralakdilu/pointers-in-embedded-c-a7afa851c84a>`__
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                                       .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                                       1
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                       .. container::
+
+                                       .. rubric:: Lists
+                                          :name: lists
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                ` <https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/general-coding-knowledge-f2d429d4f0cd>`__
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image18|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image19|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image20|
+
+                                                .. container::
+
+                                                   .. rubric:: General
+                                                      Coding Knowledge
+                                                      :name: general-coding-knowledge
+
+                                                   .. container::
+
+                                                      20 stories·696
+                                                      saves
+
+                                             .. container::
+
+                                                ` <https://archive.ph/o/CnMQt/https://medium.com/@MediumStaff/list/stories-to-help-you-grow-as-a-software-developer-b1d913188c20>`__
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image21|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image22|
+
+                                                .. container::
+
+                                                   .. rubric:: Stories
+                                                      to Help You Grow
+                                                      as a Software
+                                                      Developer
+                                                      :name: stories-to-help-you-grow-as-a-software-developer
+
+                                                   .. container::
+
+                                                      19 stories·641
+                                                      saves
+
+                                             .. container::
+
+                                                ` <https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/leadership-0cc0d07e2706>`__
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image23|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image24|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |Casually
+                                                         dressed
+                                                         colleagues
+                                                         discussing
+                                                         feedback in
+                                                         front of
+                                                         colourful
+                                                         paintings|
+
+                                                .. container::
+
+                                                   .. rubric:: Leadership
+                                                      :name: leadership
+
+                                                   .. container::
+
+                                                      39 stories·180
+                                                      saves
+
+                                             .. container::
+
+                                                ` <https://archive.ph/o/CnMQt/https://medium.com/@breanamjones/list/good-product-thinking-25dfb3a0bd21>`__
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image26|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image27|
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         |image28|
+
+                                                .. container::
+
+                                                   .. rubric:: Good
+                                                      Product Thinking
+                                                      :name: good-product-thinking
+
+                                                   .. container::
+
+                                                      11 stories·388
+                                                      saves
+
+                                       .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d>`__
+
+                                                               .. container::
+
+                                                                  |Virtual
+                                                                  Destructors
+                                                                  &
+                                                                  Inheritance
+                                                                  in
+                                                                  C++|
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604>`__
+
+                                                                           .. container::
+
+                                                                              |Anthony
+                                                                              Wang|
+
+                                                                              .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604>`__
+
+                                                                           .. container::
+
+                                                                              Anthony
+                                                                              Wang
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d>`__
+
+                                                                  .. container::
+
+                                                                     .. rubric:: Virtual
+                                                                        Destructors
+                                                                        &
+                                                                        Inheritance
+                                                                        in
+                                                                        C++
+                                                                        :name: virtual-destructors-inheritance-in-c
+
+                                                                  .. container::
+
+                                                                     .. rubric:: When
+                                                                        we
+                                                                        work
+                                                                        with
+                                                                        inheritance,
+                                                                        the
+                                                                        order
+                                                                        of
+                                                                        calling
+                                                                        constructors
+                                                                        and
+                                                                        destructors
+                                                                        can
+                                                                        be
+                                                                        summarized
+                                                                        as
+                                                                        the
+                                                                        following:
+                                                                        :name: when-we-work-with-inheritance-the-order-of-calling-constructors-and-destructors-can-be-summarized-as-the-following
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d>`__
+
+                                                               .. container::
+
+                                                                  3 min
+                                                                  read·Aug
+                                                                  15
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d>`__
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441>`__
+
+                                                               .. container::
+
+                                                                  |Digital
+                                                                  Signal
+                                                                  Processing|
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime>`__
+
+                                                                           .. container::
+
+                                                                              |Lance
+                                                                              Harvie|
+
+                                                                              .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime>`__
+
+                                                                           .. container::
+
+                                                                              Lance
+                                                                              Harvie
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441>`__
+
+                                                                  .. container::
+
+                                                                     .. rubric:: Digital
+                                                                        Signal
+                                                                        Processing
+                                                                        (DSP)
+                                                                        in
+                                                                        Embedded
+                                                                        Systems
+                                                                        :name: digital-signal-processing-dsp-in-embedded-systems
+
+                                                                  .. container::
+
+                                                                     .. rubric:: Digital
+                                                                        Signal
+                                                                        Processing
+                                                                        (DSP)
+                                                                        plays
+                                                                        a
+                                                                        vital
+                                                                        role
+                                                                        in
+                                                                        modern
+                                                                        technology.
+                                                                        As
+                                                                        an
+                                                                        essential
+                                                                        component
+                                                                        of
+                                                                        various
+                                                                        electronic
+                                                                        devices
+                                                                        and…
+                                                                        :name: digital-signal-processing-dsp-plays-a-vital-role-in-modern-technology.-as-an-essential-component-of-various-electronic-devices-and
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441>`__
+
+                                                               .. container::
+
+                                                                  10 min
+                                                                  read·Aug
+                                                                  14
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441>`__
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    1
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity/tcp-handling-in-linux-cc864f35818b>`__
+
+                                                               .. container::
+
+                                                                  |TCP
+                                                                  handling
+                                                                  in
+                                                                  Linux|
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity>`__
+
+                                                                           .. container::
+
+                                                                              |Dipak
+                                                                              Kr
+                                                                              das|
+
+                                                                              .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity>`__
+
+                                                                           .. container::
+
+                                                                              Dipak
+                                                                              Kr
+                                                                              das
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity/tcp-handling-in-linux-cc864f35818b>`__
+
+                                                                  .. container::
+
+                                                                     .. rubric:: TCP
+                                                                        handling
+                                                                        in
+                                                                        Linux
+                                                                        :name: tcp-handling-in-linux
+
+                                                                  .. container::
+
+                                                                     .. rubric:: In
+                                                                        the
+                                                                        last
+                                                                        article
+                                                                        I
+                                                                        explained
+                                                                        packet
+                                                                        flow
+                                                                        in
+                                                                        the
+                                                                        linux
+                                                                        kernel
+                                                                        and
+                                                                        netfilter
+                                                                        hooks.
+                                                                        This
+                                                                        time
+                                                                        I’ll
+                                                                        zoom
+                                                                        in
+                                                                        to
+                                                                        the
+                                                                        TCP
+                                                                        part
+                                                                        of
+                                                                        the
+                                                                        network…
+                                                                        :name: in-the-last-article-i-explained-packet-flow-in-the-linux-kernel-and-netfilter-hooks.-this-time-ill-zoom-in-to-the-tcp-part-of-the-network
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity/tcp-handling-in-linux-cc864f35818b>`__
+
+                                                               .. container::
+
+                                                                  9 min
+                                                                  read·Dec
+                                                                  12
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@dd.identity/tcp-handling-in-linux-cc864f35818b>`__
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                          .. container::
+
+                                             .. container::
+
+                                                .. container::
+
+                                                   .. container::
+
+                                                      .. container::
+
+                                                         .. container::
+
+                                                            .. container::
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4>`__
+
+                                                               .. container::
+
+                                                                  |What
+                                                                  is
+                                                                  Firmware
+                                                                  and
+                                                                  Kernel ?|
+
+                                                            .. container::
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman>`__
+
+                                                                           .. container::
+
+                                                                              |Anshuman
+                                                                              bansal|
+
+                                                                              .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman>`__
+
+                                                                           .. container::
+
+                                                                              Anshuman
+                                                                              bansal
+
+                                                               .. container::
+
+                                                                  ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4>`__
+
+                                                                  .. container::
+
+                                                                     .. rubric:: What
+                                                                        is
+                                                                        Firmware
+                                                                        and
+                                                                        Kernel ?
+                                                                        :name: what-is-firmware-and-kernel
+
+                                                                  .. container::
+
+                                                                     .. rubric:: Previouly
+                                                                        we
+                                                                        have
+                                                                        used
+                                                                        Firmware
+                                                                        and
+                                                                        Kernel
+                                                                        both
+                                                                        so
+                                                                        lets
+                                                                        understand
+                                                                        indepth
+                                                                        difference.
+                                                                        :name: previouly-we-have-used-firmware-and-kernel-both-so-lets-understand-indepth-difference.
+
+                                                               ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4>`__
+
+                                                               .. container::
+
+                                                                  3 min
+                                                                  read·Sep
+                                                                  16
+
+                                                               .. container::
+
+                                                                  .. container::
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              ` <https://archive.ph/o/CnMQt/https://medium.com/@TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4>`__
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                                                              .. container::
+
+                                                                                 .. container::
+
+                                                                                    4
+
+                                                                     .. container::
+
+                                                                        .. container::
+
+                                                                           .. container::
+
+                                       .. container::
+
+                                       ` <https://archive.ph/o/CnMQt/https://medium.com/>`__
+
+                                       .. container::
+
+                                          See more recommendations
+
+                              .. container::
+
+                                 .. container::
+
+                                 .. container::
+
+                                    .. container::
+
+                                       .. container::
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://help.medium.com/hc/en-us>`__
+
+                                             .. container::
+
+                                                Help
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://medium.statuspage.io/>`__
+
+                                             .. container::
+
+                                                Status
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://medium.com/about>`__
+
+                                             .. container::
+
+                                                About
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e>`__
+
+                                             .. container::
+
+                                                Careers
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://blog.medium.com/>`__
+
+                                             .. container::
+
+                                                Blog
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://policy.medium.com/medium-privacy-policy-f03bf92035c9>`__
+
+                                             .. container::
+
+                                                Privacy
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://policy.medium.com/medium-terms-of-service-9db0094a1e0f>`__
+
+                                             .. container::
+
+                                                Terms
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://speechify.com/medium>`__
+
+                                             .. container::
+
+                                                Text to speech
+
+                                          .. container::
+
+                                             ` <https://archive.ph/o/CnMQt/https://medium.com/business>`__
+
+                                             .. container::
+
+                                                Teams
+
+      .. container::
+
+         +------------------+
+         | `0% <#0%>`__     |
+         +------------------+
+         | `  <#5%>`__      |
+         +------------------+
+         | `10% <#10%>`__   |
+         +------------------+
+         | `  <#15%>`__     |
+         +------------------+
+         | `20% <#20%>`__   |
+         +------------------+
+         | `  <#25%>`__     |
+         +------------------+
+         | `30% <#30%>`__   |
+         +------------------+
+         | `  <#35%>`__     |
+         +------------------+
+         | `40% <#40%>`__   |
+         +------------------+
+         | `  <#45%>`__     |
+         +------------------+
+         | `50% <#50%>`__   |
+         +------------------+
+         | `  <#55%>`__     |
+         +------------------+
+         | `60% <#60%>`__   |
+         +------------------+
+         | `  <#65%>`__     |
+         +------------------+
+         | `70% <#70%>`__   |
+         +------------------+
+         | `  <#75%>`__     |
+         +------------------+
+         | `80% <#80%>`__   |
+         +------------------+
+         | `  <#85%>`__     |
+         +------------------+
+         | `90% <#90%>`__   |
+         +------------------+
+         | `  <#95%>`__     |
+         +------------------+
+         | `100% <#100%>`__ |
+         +------------------+
+
+.. container::
+
+   |image37|
+
+.. container::
+
+.. container::
+   :name: stickypbModal581
+
+   .. container::
+
+   ×
+
+   .. container::
+      :name: div-hre-Archive-Today-581
+
+   .. container::
+
+.. container::
+   :name: stickypbModal582
+
+   .. container::
+
+   ×
+
+   .. container::
+      :name: div-hre-Archive-Today-582
+
+   .. container::
+
+.. container::
+   :name: stickypbModal583
+
+   .. container::
+
+   .. container::
+      :name: stickypbModalinner583
+
+      ×
+
+      .. container::
+         :name: div-hre-Archive-Today-583
+
+   .. container::
+
+.. |image0| image:: .//f0fa18f216684d153ecb61e4c55b70916f8d426e.png
+.. |image1| image:: .//bd5e3650438dc7070a24d683e9692dfc915fe4c2.svg
+.. |image2| image:: .//8b0cf3be3701f903d6098f8f23b162e886300f19.svg
+.. |image3| image:: .//929e12e002e657b64b9ebbca5a8f04188018aeac.svg
+.. |image4| image:: .//41cafcdfa5e8ed5864e4fc5a433a1aa8fccf8c2d.svg
+.. |image5| image:: .//6f3d736eff5b5db366eb64a150506ce71cdb177c.svg
+   :name: SHARE_CLOSEBTN
+   :target: https://archive.ph/CnMQt
+.. |image6| image:: .//159539ec813ac5dc13ca6ec7f110f1224359a170.png
+   :width: 32px
+   :height: 32px
+.. |Harshdixit| image:: .//c461e689bafaab5f7e326f2c94f0773a809d731f.png
+   :width: 44px
+   :height: 44px
+.. |Harshdixit| image:: .//c461e689bafaab5f7e326f2c94f0773a809d731f.png
+   :width: 72px
+   :height: 72px
+.. |CAN Protocol in STM32| image:: .//4b30d6ab35b351df3caaf3d05b481c38522be2e5.png
+.. |Harshdixit| image:: .//7c3b88aae90704e1043d34f2c3086afdf7e433ef.png
+   :width: 20px
+   :height: 20px
+.. |Difference Between Reg And Wire In Verilog| image:: .//67557a1474f5f9da51177a35606d6b1b0cf4f814.png
+.. |RTOS Programming in Keil IDE for STM32F401RE| image:: .//c69699e8d9aaf7cf9de52ba3ac9b79e01708f9e5.png
+.. |Coding Pulse width Modulation from microcontroller STM32F103C8Tx| image:: .//04d0b32ab6ce911c5df749128ba296d3d4c31b2c.png
+.. |Reviewing My Journey Through Embedded Systems So Far| image:: .//8703f5370b0bc1e8d3f8d05f9354b2e27323daad.jpg
+.. |Kshitij Vaze| image:: .//0824e85ac4dd40ee3283a2282a50b1788adad8ef.jpg
+   :width: 20px
+   :height: 20px
+.. |Pointers in Embedded C| image:: .//e5bae7e516cbc98c682b5856f008ff9d5fdaa66c.png
+.. |Shathira Lakdilu| image:: .//2a4215cc919f0c8a53c58ee3f852bd9e43f7978b.jpg
+   :width: 20px
+   :height: 20px
+.. |image18| image:: .//57916df71e36f4a4f08dc2b6106e06d452039f3a.png
+   :width: 48px
+   :height: 48px
+.. |image19| image:: .//35991f2e4c9463a82b20dbb3ac30b84e241ecd2a.jpg
+   :width: 48px
+   :height: 48px
+.. |image20| image:: .//476ea74364e5787fe477d53f0f4930ee8ad28d43.png
+   :width: 48px
+   :height: 48px
+.. |image21| image:: .//c8cea46d7b1246ba1795549d3ea23868e9503dbd.jpg
+   :width: 48px
+   :height: 48px
+.. |image22| image:: .//60fae24f784e526bbe6aefbbfaaf7e518df6f316.jpg
+   :width: 48px
+   :height: 48px
+.. |image23| image:: .//38d0bbd38f70a92c593e2a6af37ff257521732e9.png
+   :width: 48px
+   :height: 48px
+.. |image24| image:: .//c68eb641d5648a418bb29e51d3aa54442edc2ed1.png
+   :width: 48px
+   :height: 48px
+.. |Casually dressed colleagues discussing feedback in front of colourful paintings| image:: .//44b4bc29ade90724a961386931b2f3b2a6504ae9.jpg
+   :width: 48px
+   :height: 48px
+.. |image26| image:: .//97b36332a45c67d1fc7f69926534628864098d9b.jpg
+   :width: 48px
+   :height: 48px
+.. |image27| image:: .//a3859db30a89c8c895ec0aebf4b6b42723e5905b.png
+   :width: 48px
+   :height: 48px
+.. |image28| image:: .//9550fa0f5d4800e632de9a177ec696c810205e39.png
+   :width: 48px
+   :height: 48px
+.. |Virtual Destructors & Inheritance in C++| image:: .//67557a1474f5f9da51177a35606d6b1b0cf4f814.png
+.. |Anthony Wang| image:: .//d0be32ae65ebab011cd94b4467b8d2944e56bbc3.jpg
+   :width: 20px
+   :height: 20px
+.. |Digital Signal Processing| image:: .//30de8bbde43a0960444d349528deb2012490c824.jpg
+.. |Lance Harvie| image:: .//fe493602026dfe696399815e3619d7066d9ba5df.jpg
+   :width: 20px
+   :height: 20px
+.. |TCP handling in Linux| image:: .//8a066f4cfebc56afbb9645088e9fabade27a1c74.png
+.. |Dipak Kr das| image:: .//be57b8c350a6437b116ac9890874c4e036c1afe9.jpg
+   :width: 20px
+   :height: 20px
+.. |What is Firmware and Kernel ?| image:: .//e0cd6a218482d5543be3ba09e9ed6818dcb1f8e4.png
+.. |Anshuman bansal| image:: .//a7c807c316fd0407f6cd15041271d922ffb8b5a8.png
+   :width: 20px
+   :height: 20px
+.. |image37| image:: .//25d8043336eb799e52b1a0e15ff6b95e09c24e35.gif
+   :width: 1px
+   :height: 1px

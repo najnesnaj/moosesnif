@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Vida database analysis (block child) &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Carcommunication and scripts" href="link-carcom-diagswdl.html" />
+    <link rel="prev" title="Vida database analysis" href="ecuvariant.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="vida-database-analysis-block-child">
+<h1>Vida database analysis (block child)<a class="headerlink" href="#vida-database-analysis-block-child" title="Permalink to this headline">¶</a></h1>
+<p>The main focus is the CARCOM database.</p>
+<p>T144 blockchild
+- query with ID=2013 (ecuvariant)</p>
+<p>quite a few fk141 blockchild ID (extract)</p>
+<p><em>guess these are all parameters from the CEM</em></p>
+<ul class="simple">
+<li><p>4419201 Total distance (T141 block)</p></li>
+<li><p>4419685 Global Data</p></li>
+<li><p>4419034 Ambient Temperature</p></li>
+</ul>
+<section id="example-t141-ambient-temperature">
+<h2>example: T141 Ambient temperature<a class="headerlink" href="#example-t141-ambient-temperature" title="Permalink to this headline">¶</a></h2>
+<p>ID= 44119304
+4419034 ambient temperature</p>
+<ul class="simple">
+<li><p>blocktype 5</p></li>
+<li><p>fk143_datatype 50</p></li>
+<li><p>length 16</p></li>
+</ul>
+<p>-&gt; blocktype 5 = REID
+-&gt; datatype 50 = HEX</p>
+</section>
+<section id="example-t141-accelerator-pedal">
+<h2>example: T141 Accelerator pedal<a class="headerlink" href="#example-t141-accelerator-pedal" title="Permalink to this headline">¶</a></h2>
+<p>4419314 Accelerator pedal blocktype 5, fk143_datatype 50, length 16</p>
+<img alt="../_images/block.png" src="../_images/block.png" />
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Analysis of the MSQL VIDA database</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ecuvariant.html">Vida database analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vida database analysis (block child)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link-carcom-diagswdl.html">Carcommunication and scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freezeframeparam.html">Freeze Frame Param (diagnostic session)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Analysis of the MSQL VIDA database</a><ul>
+      <li>Previous: <a href="ecuvariant.html" title="previous chapter">Vida database analysis</a></li>
+      <li>Next: <a href="link-carcom-diagswdl.html" title="next chapter">Carcommunication and scripts</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/vidadatabase/block.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

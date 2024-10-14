@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>using a serial port &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What is a SocketCAN Interface?" href="../socketcan.html" />
+    <link rel="prev" title="stm32f103" href="stm32f429i.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="using-a-serial-port">
+<h1>using a serial port<a class="headerlink" href="#using-a-serial-port" title="Permalink to this headline">¶</a></h1>
+<p>Due to non working usb-uart plugs, I used what I had : an orange pi pc, running armbian. This allowed me to configure 3 serial ports.</p>
+<p>Later on in my project I configured a stm32f103c6 to be used as an uart bridge.</p>
+<section id="using-the-gpio-header-of-an-orange-pi">
+<h2>using the GPIO header of an orange pi<a class="headerlink" href="#using-the-gpio-header-of-an-orange-pi" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/orangepi2E-serialport.png" src="../_images/orangepi2E-serialport.png" />
+<p>I use armbian on a orange pi.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo armbian-config
+</pre></div>
+</div>
+<p>In the Armbian configuration utility, navigate to <em>System &gt; Hardware</em> and select the appropriate option to apply device tree overlays.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">STM microcontrollers used with CAN</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stm32f103.html">stm32f103</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stm32f429i.html">stm32f103</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">using a serial port</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">STM microcontrollers used with CAN</a><ul>
+      <li>Previous: <a href="stm32f429i.html" title="previous chapter">stm32f103</a></li>
+      <li>Next: <a href="../socketcan.html" title="next chapter">What is a SocketCAN Interface?</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/stm/serial.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

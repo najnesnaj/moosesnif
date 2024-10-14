@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>stm32f103 &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="using a serial port" href="serial.html" />
+    <link rel="prev" title="stm32f103" href="stm32f103.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="stm32f103">
+<h1>stm32f103<a class="headerlink" href="#stm32f103" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MX_CAN2_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">PB6</span><span class="w"> </span><span class="p">(</span><span class="n">TX</span><span class="p">)</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">PB12</span><span class="w"> </span><span class="p">(</span><span class="n">RX</span><span class="p">)</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">HAL_CAN_MspInit</span><span class="p">(</span><span class="n">CAN_HandleTypeDef</span><span class="o">*</span><span class="w"> </span><span class="n">hcan</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">GPIO_InitTypeDef</span><span class="w"> </span><span class="n">GPIO_InitStruct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">hcan</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="o">==</span><span class="n">CAN2</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN CAN2_MspInit 0 */</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* USER CODE END CAN2_MspInit 0 */</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* Peripheral clock enable */</span><span class="w"></span>
+<span class="w">    </span><span class="n">__HAL_RCC_CAN2_CLK_ENABLE</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">__HAL_RCC_CAN1_CLK_ENABLE</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">__HAL_RCC_GPIOB_CLK_ENABLE</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/**CAN2 GPIO Configuration</span>
+<span class="cm">    PB12     ------&gt; CAN2_RX</span>
+<span class="cm">    PB6     ------&gt; CAN2_TX</span>
+<span class="cm">    */</span><span class="w"></span>
+<span class="w">    </span><span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_PIN_12</span><span class="o">|</span><span class="n">GPIO_PIN_6</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_MODE_AF_PP</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Pull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_NOPULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_SPEED_FREQ_VERY_HIGH</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GPIO_InitStruct</span><span class="p">.</span><span class="n">Alternate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_AF9_CAN2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">HAL_GPIO_Init</span><span class="p">(</span><span class="n">GPIOB</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">GPIO_InitStruct</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN CAN2_MspInit 1 */</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* USER CODE END CAN2_MspInit 1 */</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="board-overview">
+<h2>board overview<a class="headerlink" href="#board-overview" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/stm32f429i-board-CAN2.png" src="../_images/stm32f429i-board-CAN2.png" />
+</section>
+<section id="pinheader-left">
+<h2>pinheader left<a class="headerlink" href="#pinheader-left" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/stm32f429i-left.png" src="../_images/stm32f429i-left.png" />
+</section>
+<section id="pinheader-right">
+<h2>pinheader right<a class="headerlink" href="#pinheader-right" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/stm32f429i-right.png" src="../_images/stm32f429i-right.png" />
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">STM microcontrollers used with CAN</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stm32f103.html">stm32f103</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">stm32f103</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serial.html">using a serial port</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">STM microcontrollers used with CAN</a><ul>
+      <li>Previous: <a href="stm32f103.html" title="previous chapter">stm32f103</a></li>
+      <li>Next: <a href="serial.html" title="next chapter">using a serial port</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/stm/stm32f429i.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

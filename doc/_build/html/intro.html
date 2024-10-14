@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Volvo CANBUS and Modules" href="canbus/index.html" />
+    <link rel="prev" title="Welcome to canbus’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>I have an old volvo, and although this is probably a bad indicator for a car enthusiast, I do like car technology.</p>
+<p>Cars have evolved, and are now full of electronics. Microcontrollers interconnected via a CAN netwerk.</p>
+<p>Very soon my old diesel car will not be legal anymore (although EURO 5, having a particle filter, EGR valve ….)</p>
+<p>The value of my car was estimated 500 euro, and this was two years ago …</p>
+<p>Still, for me it is much more valuable! Certainly since I started looking under the hood.</p>
+<p>I bought one of those cheap chinese diagnostic tools.
+At first I did not pay attention, since all I wanted is save a buck on maintenance. This is one of the reasons old cars get expensive and people will get a new one.</p>
+<p>The diagnostic tool is called VIDA, it came with a virtual box.
+As it happens you can find this easily: e.g. <a class="reference external" href="https://volvodiag.com/product/virtualbox-build/">https://volvodiag.com/product/virtualbox-build/</a>  (google is your friend)</p>
+<p>This is commercial software, so any free copy you will find is of course illegal. From what I found out somebody (Gunnar?) in the US made a copy.</p>
+<p>Suppose you’re a volvo dealer, you would like to use the same software for all your volvo models, even the older ones.</p>
+<p>The software is using an sql-database and XML files, so everything is a parameter. I’m not an expert, but it is very well made, and offers a lot of insight on how professional developers create a highly configurable package.
+Watch and learn!</p>
+<p>A word of warning : the software is not open sourced!</p>
+<p>Instead of buying a new electric volvo my attention got caught by Damien Maguire MuskVo. He is involved in the openinverter project : <a class="reference external" href="https://openinverter.org/wiki/Main_Page">https://openinverter.org/wiki/Main_Page</a>.</p>
+<p>As it turns out these car enthusiasts have succesfully converted modern (ecu containing) cars into electric vehicles with modern electrics and batteries.</p>
+<p>A big hurdle is exactly the presence of all the electronics. If replacing the ICE (internal combustion engine) by electric, you will somehow have to fool the brain (ECM) that the ICE is still there.</p>
+<p>All these modules talk to each other via the CAN bus network. An important step in an EV conversion is getting familiar with this network.</p>
+<p>I created a cheap STM32 CAN interface, which consists of an advanced sniffer/sender and an emulator (which will eventually emulate the Volvo ECM)</p>
+<p>As you might have guessed Car manufacturers are not really into open source. Even figuring out what is going on the CANBUS can be challenging. This is the reason why I analysed the diagnostic software, to gain further insight into CAN messaging.</p>
+<p>This manual is an account of my journey in the car network, car communication and car diagnostics, which might pave the way for an EV conversion….</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to canbus’s documentation!</a></li>
+      <li>Next: <a href="canbus/index.html" title="next chapter">Volvo CANBUS and Modules</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/intro.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

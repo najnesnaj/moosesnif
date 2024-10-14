@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Openmoose &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="using candump" href="candump.html" />
+    <link rel="prev" title="DBC (Database Container) Files: The Key to Decoding CAN Bus Messages" href="dbc.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="openmoose">
+<h1>Openmoose<a class="headerlink" href="#openmoose" title="Permalink to this headline">¶</a></h1>
+<p>Since I have a Dice cable (usb to OBD2), I wondered if this is usable to send/receive custom messages. Openmoose is a project to re-write the ECU using the dice cable, so figured it should be usable for diagnostic purposes.</p>
+<p><a class="reference external" href="http://www.openmoose.net/">http://www.openmoose.net/</a></p>
+<p><a class="reference external" href="https://github.com/rlinewiz/OpenMoose">https://github.com/rlinewiz/OpenMoose</a></p>
+<p>Read and write your Volvo ECU (Bosch ME7) using a DiCE cable.</p>
+<section id="modding">
+<h2>modding<a class="headerlink" href="#modding" title="Permalink to this headline">¶</a></h2>
+<p>jetbrains dotPeek was used to have a look at the J2534.dll.</p>
+<p>I used a vbox which contained all the microsoft development, but it crashed often (my fault?).</p>
+<p><a class="reference external" href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/</a></p>
+</section>
+<section id="code">
+<h2>code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>The following code was found in the J2534.dll, and shows how a can data-message is composed. This can be used to send custom messages.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   public static readonly CANPacket msgCANReadECMConfig = new CANPacket(new byte[8]
+{
+  (byte) 203,
+  (byte) 122,
+  (byte) 185,
+  (byte) 245,
+  (byte) 0,
+  (byte) 0,
+  (byte) 0,
+  (byte) 0
+});
+</pre></div>
+</div>
+<p>The extended ID, if not provided is a standard diagnostic EID like 0xFFFFFE.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public CANPacket(byte[] data)
+{
+  this.data = new byte[data.Length + 4];
+  this.data[0] = (byte) 0;
+  this.data[1] = (byte) 15;
+  this.data[2] = byte.MaxValue;
+  this.data[3] = (byte) 254;
+  for (int index = 0; index &lt; data.Length; ++index)
+    this.data[index + 4] = data[index];
+  this.protocolType = PROTOCOL_TYPE.CAN_XON_XOFF;
+}
+</pre></div>
+</div>
+<p>The EID can be given as a parameter as well.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public CANPacket(byte[] data, int eid)
+{
+  byte[] eid1 = new byte[4]
+  {
+    (byte) 0,
+    (byte) 0,
+    (byte) 0,
+    (byte) eid
+  };
+  eid1[2] = (byte) (eid &gt;&gt; 8);
+  eid1[1] = (byte) (eid &gt;&gt; 16);
+  eid1[0] = (byte) (eid &gt;&gt; 24);
+  this.setupCANPacketEID(data, eid1);
+}
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Openmoose</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modding">modding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code">code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dbc.html" title="previous chapter">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+      <li>Next: <a href="candump.html" title="next chapter">using    candump</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/openmoose.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

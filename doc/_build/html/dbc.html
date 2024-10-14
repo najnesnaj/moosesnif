@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>DBC (Database Container) Files: The Key to Decoding CAN Bus Messages &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Openmoose" href="openmoose.html" />
+    <link rel="prev" title="Keys" href="hacking/keys.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="dbc-database-container-files-the-key-to-decoding-can-bus-messages">
+<h1>DBC (Database Container) Files: The Key to Decoding CAN Bus Messages<a class="headerlink" href="#dbc-database-container-files-the-key-to-decoding-can-bus-messages" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.csselectronics.com/pages/dbc-editor-can-bus-database">https://www.csselectronics.com/pages/dbc-editor-can-bus-database</a></p>
+<section id="example-vehiclespeed">
+<h2>example : VehicleSpeed<a class="headerlink" href="#example-vehiclespeed" title="Permalink to this headline">¶</a></h2>
+<p>Vehiclespeed for a Volvo C30 has CAN ID 2104136, but this if followed by the speed data. In a dbc file is defined how this speed can be decoded from CAN messages.
+<a href="#id1"><span class="problematic" id="id2">BO_</span></a> 2182103350 VehicleSpeedBCM: 8 BCM</p>
+<blockquote>
+<div><p><a href="#id3"><span class="problematic" id="id4">SG_</span></a> VehicleSpeed : <a class="reference external" href="mailto:55|16&#37;&#52;&#48;0+">55|16<span>&#64;</span>0+</a> (0.01,0) [0|65535] ” km/h” XXX</p>
+</div></blockquote>
+</section>
+<section id="short-intro">
+<h2>short intro<a class="headerlink" href="#short-intro" title="Permalink to this headline">¶</a></h2>
+<p>In the world of automotive communication systems, Controller Area Network (CAN) bus plays a crucial role in facilitating communication between various electronic control units (ECUs) within vehicles. Understanding and decoding CAN bus messages is essential for tasks such as vehicle diagnostics, monitoring, and control.</p>
+<p>DBC (Database Container) files serve as the cornerstone for decoding CAN bus messages. Developed by Vector Informatik, DBC files are structured databases that define the parameters, signals, and message formats used in CAN bus networks. These files provide a standardized format for describing the communication protocols and message data within a CAN network.</p>
+<p>Within a DBC file, each message is defined with its identifier, data length, and the signals contained within it. Signals represent specific data parameters transmitted within CAN messages, such as vehicle speed, engine RPM, or sensor readings. Each signal is associated with attributes such as scaling factors, offsets, and units, which are crucial for interpreting the raw data received from the CAN bus.</p>
+<p>DBC files also include information about the physical layout of the data within CAN messages, such as the byte order (big-endian or little-endian) and the bit arrangement of individual signals. This information is essential for correctly parsing and decoding the data received from the CAN bus.</p>
+<p>In practical applications, DBC files are used in conjunction with software tools known as CAN bus analyzers or decoders. These tools parse incoming CAN bus data using the information provided in the DBC file, allowing users to interpret and visualize the data in a human-readable format. This enables engineers, developers, and technicians to monitor vehicle performance, diagnose faults, and develop new automotive functionalities with ease.</p>
+<p>In summary, DBC files serve as invaluable resources for decoding CAN bus messages, providing a standardized and structured approach to understanding the communication protocols used in automotive networks. With DBC files and the appropriate decoding tools, unlocking the wealth of data flowing through the CAN bus becomes accessible, empowering automotive professionals to innovate and optimize vehicle systems effectively.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-vehiclespeed">example : VehicleSpeed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#short-intro">short intro</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="hacking/keys.html" title="previous chapter">Keys</a></li>
+      <li>Next: <a href="openmoose.html" title="next chapter">Openmoose</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dbc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

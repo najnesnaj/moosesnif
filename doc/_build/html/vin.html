@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Reading the VIN (Vehicle Identification Number) &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Volvo Diagnostic messages" href="volvo-diagnostic.html" />
+    <link rel="prev" title="decoding explained:" href="decoding.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="reading-the-vin-vehicle-identification-number">
+<h1>Reading the VIN (Vehicle Identification Number)<a class="headerlink" href="#reading-the-vin-vehicle-identification-number" title="Permalink to this headline">¶</a></h1>
+<p>VIN stands for Vehicle Identification Number. It is a unique code assigned to every motor vehicle when it’s manufactured. VINs are composed of 17 characters (digits and capital letters) and serve as a vehicle’s fingerprint, providing information about its manufacturer, model, features, and more. VINs are used for various purposes including vehicle registration, tracking recalls, insurance records, and theft prevention.</p>
+<p>At the start of the VIDA communication, it does not know your Volvo. (VIDA does not know nothing)</p>
+<section id="sniffing-vida-dice">
+<h2>sniffing vida dice<a class="headerlink" href="#sniffing-vida-dice" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>notice ID = 0x726</p></li>
+<li><p>DB 0 = 0x03 (meaning 3 bytes of data?)</p></li>
+<li><p>DB 1 = 0x22</p></li>
+<li><p>DB 2 = 0xf1 (address 0xF114 as specified in xml)</p></li>
+<li><p>DB 3 = 0x14</p></li>
+</ul>
+<img alt="_images/vin.png" src="_images/vin.png" />
+<p>The following script I got from the internet, but it shows  that it loads a script ‘Read VIN first readout (Odometer Value) (No immo check)’
+<em>‘Read_VIN_first_readout_(Odometer_Value)_(No_immo_check)’:
+0900c8af8184c004</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[CarStatus       ][00F][Info]    Init CarStatus
+[ScriptProvider  ][00F][Event]   Database: DiagSwdlRepository, SP: GetScript,  Type: &#39;ReadVin&#39; ScriptId: &#39;&#39; Language: &#39;en-US&#39; EcuType: &#39;-1&#39; Profile: &#39;EMPTYPROFILE,&#39;
+[ScriptProvider  ][00F][Info]    Fetched script: &#39;VCC-225200-1 1.8&#39; title: &#39;Read VIN first readout (Odometer Value) (No immo check)&#39;
+[Script          ][00F][Info]    Running script: &#39;VCC-225200-1 1.8&#39; title: &#39;Read VIN first readout (Odometer Value) (No immo check)&#39;
+[CarComRepository][011][Event]   Database: CarCom, SP: general_GetEcuId, EcuId: 30728270 AA, Result: 821
+[DiagnosticVehCom][011][Info]    Using diagnostic part number &#39;30728270 AA&#39; for system type: &#39;0&#39;
+[CarComRepository][011][Event]   Database: CarCom, SP: vadis_GetEcuVariantData, EcuVariant: 821
+</pre></div>
+</div>
+</section>
+<section id="fetched-script">
+<h2>Fetched script<a class="headerlink" href="#fetched-script" title="Permalink to this headline">¶</a></h2>
+<p>The script with title ‘VCC-225200’ got fetched.
+As it happens this script can be found in a VIDA database table.</p>
+<p><em>fkScript,fkLanguage,DisplayText,XmlDataCompressed,checksum</em></p>
+<p>‘Read_VIN_first_readout_(Odometer_Value)_(No_immo_check)’</p>
+<p>uncompressing this : 0900c8af8184c004</p>
+<p>which is an XML file</p>
+</section>
+<section id="xml-content">
+<h2>xml content<a class="headerlink" href="#xml-content" title="Permalink to this headline">¶</a></h2>
+<p>as it happens this part of the script applies to my car
+There is a value : 0xF114, sending this to the ECU should get some VIN values.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;node class=&quot;Components.ReadVinComponent&quot; id=&quot;nev9333590-nev15368413n1&quot; nodeid=&quot;EuCD&quot; x=&quot;620&quot; y=&quot;275&quot;&gt;
+  &lt;property class=&quot;Int&quot; id=&quot;nev9333590-nev15368414n1&quot; name=&quot;CanHiSpeedValue&quot; type=&quot;In&quot; value=&quot;500000&quot; visible=&quot;0&quot;/&gt;
+  &lt;property class=&quot;Int&quot; id=&quot;nev9333590-nev15368415n1&quot; name=&quot;UseRelay&quot; type=&quot;In&quot; value=&quot;0&quot; visible=&quot;0&quot;/&gt;
+  &lt;property class=&quot;Byte&quot; id=&quot;nev9333590-nev15368416n1&quot; name=&quot;BusId&quot; type=&quot;In&quot; value=&quot;1&quot; visible=&quot;0&quot;/&gt;
+  &lt;property class=&quot;String&quot; id=&quot;nev9333590-nev15368417n1&quot; name=&quot;Identifier&quot; type=&quot;In&quot; value=&quot;F114&quot; visible=&quot;0&quot;/&gt;
+  &lt;property class=&quot;String&quot; id=&quot;nev9333590-nev15368418n1&quot; name=&quot;Mode&quot; type=&quot;Internal&quot; value=&quot;EcuVariant&quot; visible=&quot;1&quot;/&gt;
+  &lt;property class=&quot;Int&quot; id=&quot;nev9333590-nev15368419n1&quot; name=&quot;ServiceId&quot; type=&quot;In&quot; value=&quot;100&quot; visible=&quot;0&quot;/&gt;
+  &lt;property class=&quot;String&quot; id=&quot;nev9333590-nev15368420n1&quot; name=&quot;EcuName&quot; type=&quot;Out&quot; value=&quot;&quot; visible=&quot;1&quot;/&gt;
+  &lt;property class=&quot;Response&quot; id=&quot;nev9333590-nev15368421n1&quot; name=&quot;Result&quot; type=&quot;Out&quot; value=&quot;&quot; visible=&quot;1&quot;/&gt;
+  &lt;property class=&quot;String&quot; id=&quot;nev9333590-nev15368422n1&quot; name=&quot;EcuVariant&quot; type=&quot;In&quot; value=&quot;30728270 AA&quot; visible=&quot;0&quot;/&gt;
+  &lt;extension id=&quot;nev9333590-nev15368423n1&quot;/&gt;
+&lt;/node&gt;
+</pre></div>
+</div>
+<p>Now what happens next ?</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[CarComRepository][010][Event] Database: CarCom, SP: general_GetEcuId,
+EcuId: 30728270 AA, Result: 821
+</pre></div>
+</div>
+<p>It gets to the CarCom database (just a microsoft sql mdf file-somewhere at the back of this manual there is a procedure to access these files under linux)</p>
+<p><em>SP: general_getEcuID</em></p>
+<ul class="simple">
+<li><p>SP = stored procedure</p></li>
+<li><p>Carcom = database</p></li>
+</ul>
+<p><em>select id from T100_Ecuvariant where identifier = &#64;ecuIdentifier</em></p>
+<p>so it will get the Ecu variant in the T100 table where EcuId=”30728270 AA”</p>
+<ul class="simple">
+<li><p>it comes up with ecuvariant 821</p></li>
+<li><p>next a stored procedure vadis_GetEcuVariantData is executed</p></li>
+</ul>
+<p>the following is an example of such a stored procedure, it might not be entirely correct, since I used ocr software ..</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SELECT
+T100_EcuVariant. identifier AS DiagNumber,
+102_EcuType.identifier AS EcuTypeldentifier,
+T101_Ecu.identifier AS Eculdentifier,
+T121_Config.commAddress AS EcuAddress,
+T100_EcuVariant.id AS EcuVariantid,
+T102_EcuType.description AS EcuName,
+T121_Config.id As Configid,
+T121_Config.fkt121_Config_Gateway As GatewayConfigId,
+T122_Protocol.id AS Protocolld
+FROM
+T100_EcuVariant
+INNER JOIN
+T101_Ecu ON T100_EcuVariant.fkT101_Ecu = T101_Ecu.id
+INNER JOIN
+T102_EcuType ON T101_Ecu.fkT102_EcuType
+INNER JO1N
+T120_Config_EcuVariant ON T100_EcuVariant.id = T120_Config_EcuVariant.fkT100_Ecu
+Variant
+INNER JOIN
+T121_Config ON T120_Config_EcuVariant.fkT121_Config = T121_Config.id
+INNER JOIN
+T122_Protocol ON T121_Config.fkT122_pratocol
+WHERE (T100_EcuVariant.id = @ecuVariantid)
+ORDER BY Priority
+</pre></div>
+</div>
+</section>
+<section id="stored-procedure-general-getecuid">
+<h2>Stored procedure : general_GetEcuId<a class="headerlink" href="#stored-procedure-general-getecuid" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoding.html">decoding explained:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reading the VIN (Vehicle Identification Number)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sniffing-vida-dice">sniffing vida dice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetched-script">Fetched script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xml-content">xml content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stored-procedure-general-getecuid">Stored procedure : general_GetEcuId</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="decoding.html" title="previous chapter">decoding explained:</a></li>
+      <li>Next: <a href="volvo-diagnostic.html" title="next chapter">Volvo Diagnostic messages</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/vin.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

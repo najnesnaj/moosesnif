@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Volvo VIDA &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) ." href="DHA.html" />
+    <link rel="prev" title="Volvo Diagnostic Software" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="volvo-vida">
+<h1>Volvo VIDA<a class="headerlink" href="#volvo-vida" title="Permalink to this headline">¶</a></h1>
+<p>Volvo VIDA (Vehicle Information and Diagnostics for Aftersales) is a comprehensive diagnostic software system developed by Volvo Cars to aid in the servicing and maintenance of their vehicles. It provides technicians with the necessary tools to diagnose, troubleshoot, and repair Volvo cars effectively.</p>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Vehicle Information</strong>:
+VIDA provides detailed information about Volvo vehicles, including technical specifications, wiring diagrams, component locations, and service procedures. This allows technicians to quickly access relevant information needed for diagnosis and repair.</p></li>
+<li><p><strong>Diagnostic Functions</strong>:
+VIDA allows technicians to perform comprehensive diagnostics on various vehicle systems, including the engine, transmission, ABS, airbag, climate control, and more. It can read and clear diagnostic trouble codes (DTCs), view live data streams, perform component tests, and program electronic control modules (ECUs).</p></li>
+<li><p><strong>Software Updates</strong>:
+VIDA enables technicians to update vehicle software to the latest available versions. This is crucial for ensuring optimal performance, reliability, and compatibility with new technologies.</p></li>
+<li><p><strong>Guided Diagnostics</strong>:
+VIDA offers guided diagnostic procedures to assist technicians in identifying and resolving vehicle issues efficiently. These step-by-step instructions help streamline the diagnostic process and minimize errors.</p></li>
+<li><p><strong>Remote Diagnostics</strong>:
+VIDA supports remote diagnostics capabilities, allowing technicians to access vehicle data and perform diagnostics remotely. This feature can be particularly useful for troubleshooting complex issues or providing support to technicians in remote locations.</p></li>
+<li><p><strong>Integrated Parts Catalog</strong>:
+VIDA includes an integrated parts catalog that provides access to genuine Volvo parts information, including part numbers, descriptions, and illustrations. This simplifies the process of ordering and replacing components during repairs.</p></li>
+<li><p><strong>Multi-Language Support</strong>:
+VIDA is available in multiple languages, making it accessible to technicians worldwide.</p></li>
+</ol>
+<p>Overall, Volvo VIDA is a powerful diagnostic tool that helps Volvo technicians efficiently diagnose and repair vehicles, ensuring optimal performance, safety, and reliability for Volvo owners.</p>
+</section>
+<section id="databases">
+<h2>databases<a class="headerlink" href="#databases" title="Permalink to this headline">¶</a></h2>
+<p>The best way to get some relevant data out of the VIDA, is to start a diagnostic sessions. It then creates logfiles under : VIDA/system/log/diagnostics.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Trying to open a connection database server (Master DB)
+ connection is open
+Found database AccessServer
+Found database BaseData
+Found database CarCom
+Found database DiagSwdlRepository
+Found database DiagSwdlSession
+Found database DiceTiming
+Found database imagerepository
+Found database EPC
+</pre></div>
+</div>
+</section>
+<section id="sql-database-vida">
+<h2>SQL database VIDA<a class="headerlink" href="#sql-database-vida" title="Permalink to this headline">¶</a></h2>
+<p>the VIDA installation has a SQL server database (microsoft) onboard.
+There is a way to peek into the tables :
+- in the VidaConfigApplication.exe
+- DBUser :  sa  (in my case)
+- DBpwd :  GunnarS3g3</p>
+<p>SQL server import/export wizard
+- use sql Server Authentication
+- select the database (eg DiagSwdlSession)</p>
+</section>
+<section id="howto-peek-into-the-vida-database">
+<h2>howto peek into the VIDA database:<a class="headerlink" href="#howto-peek-into-the-vida-database" title="Permalink to this headline">¶</a></h2>
+<p>Volvo VIDA software is designed for multiple Volvo models and multiple model years. To select your model and the appropriate configuration, it reads out the VIN (vehicle identification number). This is made possible by the software’s large database of XML files. There is a method to read out these XML files and select the ones that are important for your model.</p>
+<p><a class="reference external" href="https://github.com/spnda/volvo_vida_db">https://github.com/spnda/volvo_vida_db</a>
+<a class="reference external" href="https://github.com/Tigo2000/Volvo-VIDA/">https://github.com/Tigo2000/Volvo-VIDA/</a></p>
+</section>
+<section id="stored-procedures">
+<h2>stored procedures:<a class="headerlink" href="#stored-procedures" title="Permalink to this headline">¶</a></h2>
+<p>in the microsoft sql database, you can find stored procedures, that can give some indication on where VIDA gets its information</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/****** Object:  Stored Procedure dbo.vadis_GetDiagInit    Script Date: 2006-10-18 14:59:31 ******/
+
+ALTER  PROCEDURE [dbo].[vadis_GetDiagInit]
+@configId int
+AS
+SELECT     T132_InitValueType.name,
+    T131_InitValue.initValue
+FROM
+  T130_Init
+INNER JOIN
+         T131_InitValue ON T130_Init.id = T131_InitValue.fkT130_Init
+INNER JOIN
+         T132_InitValueType ON T131_InitValue.fkT132_InitValueType = T132_InitValueType.id
+INNER JOIN
+  T121_Config ON T130_Init.id = T121_Config.fkT130_Init_Diag
+WHERE
+ (T121_Config.id = @configId)
+</pre></div>
+</div>
+</section>
+<section id="example">
+<h2>example:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>this could be a record of interest :
+CEM,Central electronic module (CEM),Read high beam relay,NA,372302,80,0x504B03041400000008000B1D47</p>
+<ul class="simple">
+<li><p>the number 372302 refers to the CEM</p></li>
+<li><p>0x504.. is a coded file</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Volvo Diagnostic Software</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Volvo VIDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DHA.html">GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DHA-hack.html">GGD-DHA ( Generic Global Diagnostic - Hacking ) .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Volvo Diagnostic Software</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Volvo Diagnostic Software</a></li>
+      <li>Next: <a href="DHA.html" title="next chapter">GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) .</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/software/vida.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

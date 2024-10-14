@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>decoding explained: &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reading the VIN (Vehicle Identification Number)" href="vin.html" />
+    <link rel="prev" title="Freeze Frame Param (diagnostic session)" href="vidadatabase/freezeframeparam.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="decoding-explained">
+<h1>decoding explained:<a class="headerlink" href="#decoding-explained" title="Permalink to this headline">¶</a></h1>
+<p>In order to save space, they compressed scripts using zip.</p>
+<p>To read the script, you’ll have some work …</p>
+<p>so 0x504… is  xml_data_compressed_hex</p>
+<p>First we remove the “0x” prefix and convert the remaining hex string to binary data</p>
+<p>xml_data_bin = bytes.fromhex(xml_data_compressed_hex[2:])</p>
+<p>this data we write to disk as a zip file (and subsequently uncompress it using unzip)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">sanitize_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">invalid_chars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">invalid_chars</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filename</span>
+
+<span class="c1"># Replace &#39;your_input.csv&#39; with the actual CSV file name</span>
+<span class="n">input_csv_file</span> <span class="o">=</span> <span class="s1">&#39;modified_exportvida.csv&#39;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_csv_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+        <span class="c1"># Extract fields from the CSV row</span>
+        <span class="n">fk_script</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">fk_language</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">display_text</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">xml_data_compressed_hex</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+
+        <span class="c1"># Sanitize the display_text for a filename</span>
+        <span class="n">sanitized_display_text</span> <span class="o">=</span> <span class="n">sanitize_filename</span><span class="p">(</span><span class="n">display_text</span><span class="p">)</span>
+
+        <span class="c1"># Remove the &quot;0x&quot; prefix and convert the remaining hex string to binary data</span>
+        <span class="n">xml_data_bin</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">xml_data_compressed_hex</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+        <span class="c1"># Create a sanitized filename with .zip extension and write the binary data to it</span>
+        <span class="n">output_file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">display_text</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s1">.zip&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output_file</span><span class="p">:</span>
+            <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xml_data_bin</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved binary data for </span><span class="si">{</span><span class="n">display_text</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">output_file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="volvo-model-logic">
+<h2>volvo model logic<a class="headerlink" href="#volvo-model-logic" title="Permalink to this headline">¶</a></h2>
+<p>mdl544yr2005eng167, mdl545yr2005eng167, mdl542yr2006eng167, mdl544yr2006eng167, mdl545yr2006eng167, mdl542yr2007eng167, mdl544yr2007eng167, mdl545yr2007eng167, mdl533yr2007eng167, mdl544yr2008eng167, mdl545yr2008eng167, mdl533yr2008eng167, mdl542yr2008eng167, mdl533yr2008eng199, mdl542yr2008eng199, mdl545yr2008eng199, mdl544yr2008eng199, mdl533yr2009eng199, mdl544yr2009eng199, mdl545yr2009eng199, mdl542yr2009eng199, mdl544yr2010eng199, mdl545yr2010eng199, mdl542yr2010eng199, mdl533yr2010eng199, mdl533yr2011eng199, mdl544yr2011eng199, mdl545yr2011eng199, mdl542yr2011eng199, mdl544yr2012eng199, mdl545yr2012eng199, mdl533yr2012eng199, mdl542yr2012eng199</p>
+<p>The decoded XML file contains a description of all the models it applies to.</p>
+<p>mdl545yr2008eng167</p>
+<ul class="simple">
+<li><p>mdl545 is a volvo estate (multiwagon)</p></li>
+<li><p>yr2008 is the constructionyear : 2008</p></li>
+<li><p>eng167 is a 1.6 diesel engine</p></li>
+</ul>
+<p>So is it important to select only those XML files in which your model appears.</p>
+</section>
+<section id="sniffing-in-xml-files">
+<h2>sniffing in XML files<a class="headerlink" href="#sniffing-in-xml-files" title="Permalink to this headline">¶</a></h2>
+<p>unzip Read_out_MOST_nodes_372302.zip</p>
+<p><em>372302 is the CEM</em></p>
+<p>after unzipping we get a file like this one : 0900c8af81d1cb6c</p>
+<p>we can have a look:
+<em>xmllint –format 0900c8af81d1cb6c | less</em></p>
+<ul class="simple">
+<li><p>first we need to check if our model mdl545yr2008eng167 is in this file, if not it applies to other models</p></li>
+</ul>
+</section>
+<section id="diagnostic-extract-cem-example">
+<h2>diagnostic extract CEM example<a class="headerlink" href="#diagnostic-extract-cem-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>372302,100,REID,DD06,Strömförsörjningsläge
+372302,2,BLOFF,FC,Serviceintervall
+372302,4,REID,3F98,ECM start signal
+372302,4,REID,5F30,Coolant water temp
+372302,100,REID,4007,Workshop test (TPMS) status
+372302,100,REID,4125,Batteritemperatur
+372302,100,REID,DD02,MECU spänningsmatning
+372302,100,REID,DD07,Strömförsörjningsläge
+372302,100,REID,DD00,Global tid
+372302,100,REID,DD00,Global real time
+372302,4,REID,3F02,Clutch pedal sensor
+</pre></div>
+</div>
+</section>
+<section id="reading-accelerator-pedal-position-via-can">
+<h2>reading accelerator pedal position via CAN<a class="headerlink" href="#reading-accelerator-pedal-position-via-can" title="Permalink to this headline">¶</a></h2>
+<p>&lt;identifier ecu=”284101” ecuMode=”EcuType” read=”4” type=”REID” value=”0141”&gt;</p>
+</section>
+<section id="brake-light-switch">
+<h2>Brake light switch<a class="headerlink" href="#brake-light-switch" title="Permalink to this headline">¶</a></h2>
+<p>&lt;identifier ecu=”284101” ecuMode=”EcuType” read=”4” type=”REID” value=”005C”&gt;</p>
+</section>
+<section id="turn-indicator">
+<h2>Turn indicator<a class="headerlink" href="#turn-indicator" title="Permalink to this headline">¶</a></h2>
+<p>641901,4,REID,0005,Turn indicator</p>
+</section>
+<section id="hidden-features">
+<h2>Hidden features<a class="headerlink" href="#hidden-features" title="Permalink to this headline">¶</a></h2>
+<p>There are numerous scripts, for instance about Vehcom, which could be Vehicle communication ?</p>
+<p>&lt;identifier ecu=”372304” read=”4” type=”REID” value=”9A00”&gt;
+&lt;name=”Interior light, relay” textid=”74202”/&gt;</p>
+<p><em>this one is for activating the feature?</em></p>
+<p>&lt;identifier ecu=”372302” stop=”16” type=”REID” value=”8F31” write=”15”&gt;
+&lt;name=”Rear wash motor relay” textid=”13829”&gt;</p>
+<p>&lt;identifier ecu=”372304” read=”4” type=”REID” value=”8D04”&gt;
+&lt;name=”Brake light, left” textid=”72127”/&gt;</p>
+<p>&lt;identifier ecu=”372304” read=”4” type=”REID” value=”8D05”&gt;
+&lt;name=”Brake light, right” textid=”72128”/&gt;</p>
+<p>&lt;identifier ecu=”372304” read=”4” type=”REID” value=”8D01”&gt;
+&lt;name=”Brake light switch” textid=”4716”/&gt;</p>
+</section>
+<section id="can-diagnostic-messages-howto">
+<h2>CAN diagnostic messages HOWTO<a class="headerlink" href="#can-diagnostic-messages-howto" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">decoding explained:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#volvo-model-logic">volvo model logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sniffing-in-xml-files">sniffing in XML files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagnostic-extract-cem-example">diagnostic extract CEM example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-accelerator-pedal-position-via-can">reading accelerator pedal position via CAN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brake-light-switch">Brake light switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#turn-indicator">Turn indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hidden-features">Hidden features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#can-diagnostic-messages-howto">CAN diagnostic messages HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="vidadatabase/freezeframeparam.html" title="previous chapter">Freeze Frame Param (diagnostic session)</a></li>
+      <li>Next: <a href="vin.html" title="next chapter">Reading the VIN (Vehicle Identification Number)</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/decoding.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

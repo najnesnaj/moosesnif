@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Carcommunication and scripts &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Freeze Frame Param (diagnostic session)" href="freezeframeparam.html" />
+    <link rel="prev" title="Vida database analysis (block child)" href="block.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="carcommunication-and-scripts">
+<h1>Carcommunication and scripts<a class="headerlink" href="#carcommunication-and-scripts" title="Permalink to this headline">¶</a></h1>
+<p>in the CARCOM database (T102), the modules are defined by a number:
+example the CEM = 372302</p>
+<p><strong>scripttype statusindentifier</strong></p>
+<p>in the DIAGSWDL database (ScriptCarFunction), Functiongroup (372302 exactly the same number refers to numerous script numbers)</p>
+<p>Example : 0900c8af81b6a712 which is SUN_SENSOR,_VOLTAGE,_STATUS</p>
+<section id="in-the-xml-file">
+<h2>in the XML file :<a class="headerlink" href="#in-the-xml-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>property class=&quot;Parameter&quot; id=&quot;nev9960842n1-nev9960863n1&quot;
+identifier ecu=&quot;372304&quot; ecuMode=&quot;EcuType&quot; id=&quot;nev9960842n1-nev9960865n1&quot; read=&quot;4&quot; type=&quot;REID&quot; value=&quot;5E01&quot;
+</pre></div>
+</div>
+<img alt="../_images/ScriptCarFunction.png" src="../_images/ScriptCarFunction.png" />
+</section>
+<section id="scripttype">
+<h2>ScriptType<a class="headerlink" href="#scripttype" title="Permalink to this headline">¶</a></h2>
+<p>Checking for our purpose VehCommSpecification:</p>
+<p>VehCommSpecification
+EcuIdentification
+CarStatus
+CarConfig
+ClearDtc
+ReadVin
+StatusIdentifier
+ReadDtc
+ReadDtcEcm
+Dro
+TransportMode
+CustomerParameter
+PreProg
+EcuReplace
+PreCompleteReadout
+AlarmMode
+KeyPos
+DownloadMode
+EcuIdentificationHighSpeed
+EcuIdentificationLowSpeed
+ClockValue
+PostReset
+PreSwdl</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Analysis of the MSQL VIDA database</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ecuvariant.html">Vida database analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Vida database analysis (block child)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Carcommunication and scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freezeframeparam.html">Freeze Frame Param (diagnostic session)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Analysis of the MSQL VIDA database</a><ul>
+      <li>Previous: <a href="block.html" title="previous chapter">Vida database analysis (block child)</a></li>
+      <li>Next: <a href="freezeframeparam.html" title="next chapter">Freeze Frame Param (diagnostic session)</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/vidadatabase/link-carcom-diagswdl.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

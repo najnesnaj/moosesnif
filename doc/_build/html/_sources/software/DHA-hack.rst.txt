@@ -1,0 +1,19 @@
+GGD-DHA ( Generic Global Diagnostic - Hacking ) .
+=====================================================================
+
+
+
+This software uses databases in (ddb, dds) format.
+The cool thing is that this software works with the DICE cable.
+ddb format can be edited.
+
+I created a small database for working with my V50.
+I can extract the CANBUS messages from the VIDA database.
+
+I created a sample to interact with a stm32, so it send a serial number upon request, pretending it is an ECM module (0x50).  
+
+.. image:: ../images/dha-hack.png
+
+
+
+

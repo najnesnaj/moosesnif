@@ -1,0 +1,109 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Volvo CANBUS and Modules}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Volvo Canbus OBD2}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Networks}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Volvo V50 modules overview}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Modules:}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}overview modules}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Modules for profile}{7}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}executing stored procedure}{7}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}table with overview}{7}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}further info on canbus:}{8}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Volvo uses extended identifiers:}{8}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Volvo Diagnostic Software}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Volvo VIDA}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Key Features}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}databases}{12}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}SQL database VIDA}{12}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}howto peek into the VIDA database:}{12}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}stored procedures:}{12}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}example:}{13}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}GGD\sphinxhyphen {}DHA ( Generic Global Diagnostic \sphinxhyphen {} Diagnostic Host Application ) .}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}GGD\sphinxhyphen {}DHA ( Hacking \sphinxhyphen {} or modifying the database ).}{14}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}conclusion :}{15}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Analysis of the MSQL VIDA database}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vida database analysis}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Vida database analysis (block child)}{18}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}example: T141 Ambient temperature}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}example: T141 Accelerator pedal}{19}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Carcommunication and scripts}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}in the XML file :}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}ScriptType}{21}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Freeze Frame Param (diagnostic session)}{22}{section.4.4}%
+\contentsline {chapter}{\numberline {5}decoding explained:}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}volvo model logic}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}sniffing in XML files}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}diagnostic extract CEM example}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.4}reading accelerator pedal position via CAN}{25}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Brake light switch}{25}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Turn indicator}{25}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Hidden features}{25}{section.5.7}%
+\contentsline {section}{\numberline {5.8}CAN diagnostic messages HOWTO}{25}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Reading the VIN (Vehicle Identification Number)}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}sniffing vida dice}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Fetched script}{28}{section.6.2}%
+\contentsline {section}{\numberline {6.3}xml content}{28}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Stored procedure : general\_GetEcuId}{29}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Volvo Diagnostic messages}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Sniffing the VIDA diagnostic messages:}{31}{section.7.1}%
+\contentsline {section}{\numberline {7.2}applied to a real message:}{31}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Guessing the reply}{32}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Top tip : finding a script}{32}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Script 0900c8af81d49c30 (EcuIdentification)}{33}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Using VIDA logs}{33}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Using SQL MDF viewer}{33}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Making sense}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Reading a partnumber}{35}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Reading part number from ECU 0x50}{35}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}quick analysis}{35}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}ECU Identification}{35}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}Downloadable Software Part Number}{36}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}hex2human}{36}{subsection.8.1.5}%
+\contentsline {section}{\numberline {8.2}Response}{36}{section.8.2}%
+\contentsline {section}{\numberline {8.3}example for code B9 (Read Data Block By Offset)}{36}{section.8.3}%
+\contentsline {section}{\numberline {8.4}VIDA diagnostic logs}{37}{section.8.4}%
+\contentsline {section}{\numberline {8.5}apply this to real life example}{37}{section.8.5}%
+\contentsline {section}{\numberline {8.6}using the DHA (diagnostic host application) to get a clue}{38}{section.8.6}%
+\contentsline {section}{\numberline {8.7}test\sphinxhyphen {}setup}{38}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Hacking : modifying standard settings}{39}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Checks between the ECM, CEM and BCM}{39}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Check 1}{39}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Check 2}{39}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Pincodes}{40}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}some examples:}{40}{subsection.9.2.1}%
+\contentsline {section}{\numberline {9.3}Bootloaders}{41}{section.9.3}%
+\contentsline {section}{\numberline {9.4}The software download process}{42}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Keys}{42}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Key Fob:}{42}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Ignition Transponder Reader:}{44}{subsection.9.5.2}%
+\contentsline {chapter}{\numberline {10}DBC (Database Container) Files: The Key to Decoding CAN Bus Messages}{47}{chapter.10}%
+\contentsline {section}{\numberline {10.1}example : VehicleSpeed}{47}{section.10.1}%
+\contentsline {section}{\numberline {10.2}short intro}{47}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Openmoose}{49}{chapter.11}%
+\contentsline {section}{\numberline {11.1}modding}{49}{section.11.1}%
+\contentsline {section}{\numberline {11.2}code}{49}{section.11.2}%
+\contentsline {chapter}{\numberline {12}using candump}{51}{chapter.12}%
+\contentsline {section}{\numberline {12.1}using DICE cable and modding OpenMoose}{51}{section.12.1}%
+\contentsline {chapter}{\numberline {13}baud \& bit}{53}{chapter.13}%
+\contentsline {chapter}{\numberline {14}STM microcontrollers used with CAN}{55}{chapter.14}%
+\contentsline {section}{\numberline {14.1}stm32f103}{55}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Bluepill}{58}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.2}stm32f103}{58}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}board overview}{61}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}pinheader left}{62}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}pinheader right}{63}{subsection.14.2.3}%
+\contentsline {section}{\numberline {14.3}using a serial port}{63}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}using the GPIO header of an orange pi}{64}{subsection.14.3.1}%
+\contentsline {chapter}{\numberline {15}What is a SocketCAN Interface?}{65}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Configuring SocketCAN interface : stm32multiserial}{65}{section.15.1}%
+\contentsline {chapter}{\numberline {16}Linux at home}{67}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Using mssql database on linux}{67}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Logic Analyzer}{68}{section.16.2}%
+\contentsline {section}{\numberline {16.3}virtual box on linux}{69}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}the problem is USB 3}{69}{subsection.16.3.1}%
+\contentsline {section}{\numberline {16.4}SavvyCAN}{69}{section.16.4}%
+\contentsline {subsection}{\numberline {16.4.1}using socketcan}{69}{subsection.16.4.1}%
+\contentsline {subsection}{\numberline {16.4.2}howto configure savvycan for use with socketcan}{70}{subsection.16.4.2}%
+\contentsline {subsection}{\numberline {16.4.3}playback over socketcan}{71}{subsection.16.4.3}%
+\contentsline {chapter}{\numberline {17}Indices and tables}{73}{chapter.17}%

@@ -1,0 +1,2077 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="STM32 &amp; OpenCM3 Part 3:" href="canbus-opencm3.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="docutils container">
+<p class="rubric" id="can-protocol-in-stm32-part-ii-in-previous-part-we-have-seen-the-brie">CAN Protocol in STM32 Part-II. In Previous part we have
+seen the brie…</p>
+<p><img alt="image0" src="_images/f0fa18f216684d153ecb61e4c55b70916f8d426e.png" />archived 20 Dec 2023 12:11:32 UTC</p>
+</div>
+<div class="docutils container" id="header">
+<p>` &lt;<a class="reference external" href="https://archive.today/">https://archive.today/</a>&gt;`__</p>
+<div class="docutils container">
+<p>archive.today</p>
+</div>
+<div class="docutils container">
+<p>webpage capture</p>
+</div>
+</div>
+<p>Saved from</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="docutils container">
+<p>no other snapshots from this
+url</p>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>20 Dec 2023 12:11:32 UTC
+All snapshots
+<strong>from host</strong> <a class="reference external" href="https://archive.ph/medium.com">medium.com</a>
+<a class="reference external" href="https://archive.ph/CnMQt">Webpage</a><a class="reference external" href="https://archive.ph/CnMQt/image">Screenshot</a>
+<a class="reference external" href="https://archive.ph/CnMQt/share">|image1|share</a><a class="reference external" href="https://archive.ph/download/CnMQt.zip">|image2|download
+.zip</a><a class="reference external" href="https://archive.ph/CnMQt/abuse">|image3|report bug
+or abuse</a><a class="reference external" href="http://liberapay.com/archiveis/donate">|image4|Buy me a
+coffee</a></p>
+<div class="docutils container" id="divshare">
+<div class="docutils container">
+<div class="docutils container">
+<p><a href="#id6"><span class="problematic" id="id7">|image5|</span></a></p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>Reddit</p>
+</div>
+<div class="docutils container">
+<p>VKontakte</p>
+</div>
+<div class="docutils container">
+<p>Twitter</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>Pinboard</p>
+</div>
+<div class="docutils container">
+<p>Livejournal</p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>short link</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>long link</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>markdown</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>html code</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>wiki code</p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container" id="solid">
+<div class="docutils container" id="content">
+<div class="html1 docutils container">
+<div class="html docutils container">
+<div class="body docutils container">
+<div class="docutils container" id="root">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>Open in app</p>
+<div class="docutils container">
+<div class="docutils container">
+<p>Sign up</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">Sign
+in</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/new-story">https://archive.ph/o/CnMQt/https://medium.com/new-story</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<p>Write</p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/search">https://archive.ph/o/CnMQt/https://medium.com/search</a>&gt;`__</p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>Sign up</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">Sign
+in</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/159539ec813ac5dc13ca6ec7f110f1224359a170.png"><img alt="image6" src="_images/159539ec813ac5dc13ca6ec7f110f1224359a170.png" style="width: 32px; height: 32px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="section docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p class="rubric" id="de18">CAN
+Protocol in
+STM32 Part-II</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">Harshdixit</a></p>
+</div>
+</div>
+</div>
+</div>
+<p>·</p>
+<div class="docutils container">
+<p><a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">Follow</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>3
+min
+read</p>
+<div class="docutils container">
+<p>·</p>
+</div>
+<p>Jun
+11</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>Listen</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>Share</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container" id="a">
+<p>In Previous part
+we have seen the
+brief about CAN
+protocol how it
+get used and how
+it get implemented
+in the CAN
+peripheral and
+There CAN Tx and
+CAN Rx .</p>
+</div>
+<div class="docutils container" id="id1">
+<p>We had seen that
+there are CAN
+Identifier
+RTR(Remote
+Transmission
+Request) IDE
+(Identifier ) for
+Standard ID or
+Extended ID</p>
+</div>
+<div class="docutils container" id="ef">
+<p>And Other part
+such as DLC (Data
+length) DataField
+CheckSum DEL CRC
+ACK DEL is the
+Acknowledgement
+part then EOF( End
+Of File)
+ITM(Interrupt
+manipulation) Bus
+Idle (Bus Matrix)</p>
+</div>
+<div class="docutils container" id="d3c">
+<p>. Here the <strong>BAUD
+RATE</strong> is set to
+500000bps. You can
+try different
+combinations for
+<strong>Prescalar and
+Time Quanta</strong> to
+achieve this.</p>
+</div>
+<div class="docutils container" id="fae9">
+<p>. The Operating
+Mode is <strong>NORMAL
+Mode.</strong></p>
+</div>
+<div class="docutils container" id="f08">
+<p>. Pins are PA11
+and PA12 are set
+as <strong>CAN_RX</strong> and
+<strong>CAN_TX</strong></p>
+</div>
+<div class="docutils container" id="c2dc">
+<p>Also there is
+<strong>120 ohms
+Resistance</strong> at
+each node. This is
+very important, or
+else you will not
+get the data.</p>
+</div>
+<div class="docutils container" id="c0bf">
+<p>in main.c USER
+BEGIN 0</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAN_TxHeaderTypeDef</span> <span class="n">TxHeader</span><span class="p">;</span> <span class="o">//</span> <span class="n">TxHeader</span> <span class="n">Store</span> <span class="n">information</span> <span class="n">like</span> <span class="n">RTR</span><span class="p">,</span><span class="n">DLC</span><span class="p">,</span><span class="n">etc</span><span class="o">.</span>
+<span class="n">uint8_t</span> <span class="n">TxData</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span> <span class="o">//</span> <span class="n">To</span> <span class="n">store</span> <span class="n">the</span> <span class="n">data</span><span class="p">,</span> <span class="n">that</span> <span class="n">we</span> <span class="n">are</span> <span class="n">going</span> <span class="n">to</span> <span class="n">transmit</span> <span class="n">over</span> <span class="n">the</span> <span class="n">CAN</span> <span class="n">bus</span>
+<span class="n">uint32_t</span> <span class="n">TxMailbox</span><span class="p">;</span> <span class="o">//</span> <span class="n">TxMailbox</span> <span class="n">will</span> <span class="n">sent</span> <span class="n">to</span> <span class="n">the</span> <span class="n">CAN</span> <span class="n">bus</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="docutils container" id="a86">
+<p>Now we will store
+the required
+values in the
+TxHeader and in
+the TxData.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TxHeader</span><span class="o">.</span><span class="n">IDE</span> <span class="o">=</span> <span class="n">CAN_ID_STD</span><span class="p">;</span> <span class="o">//</span> <span class="n">setting</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">Standard</span> <span class="n">ID</span>
+<span class="n">TxHeader</span><span class="o">.</span><span class="n">StdId</span> <span class="o">=</span> <span class="mh">0x446</span><span class="p">;</span> <span class="o">//</span> <span class="n">Identifier</span>
+<span class="n">TxHeader</span><span class="o">.</span><span class="n">RTR</span> <span class="o">=</span> <span class="n">CAN_RTR_DATA</span><span class="p">;</span><span class="o">//</span> <span class="n">Setting</span> <span class="n">Remote</span> <span class="n">Transmission</span> <span class="n">Request</span>
+<span class="n">TxHeader</span><span class="o">.</span><span class="n">DLC</span> <span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="o">//</span><span class="n">Data</span> <span class="n">Length</span> <span class="n">of</span> <span class="n">Data</span> <span class="nb">bytes</span>
+
+<span class="n">TxData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<span class="n">TxData</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xAA</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="docutils container" id="f614">
+<p>Now we have the
+information ready
+to be transmitted
+now we will
+finally transmit
+it on the CAN bus.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span> <span class="n">HAL_CAN_AddTxMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hcan1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">TxHeader</span><span class="p">,</span> <span class="n">TxData</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TxMailbox</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+           <span class="n">Error_handle</span><span class="p">();</span>
+</pre></div>
+</div>
+<p class="rubric" id="id2"><strong>Filter
+Configuration</strong></p>
+<div class="docutils container" id="c5c">
+<p>In Order to reduce
+the CPU Load to
+filter out
+messages , the
+STM32 have the
+filters built
+inside the CAN
+peripheral.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAN_FilterTypeDef</span> <span class="n">canfilterconfig</span><span class="p">;</span>
+
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterActivation</span> <span class="o">=</span> <span class="n">CAN_FILTER_ENABLE</span><span class="p">;</span><span class="o">//</span><span class="n">we</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="nb">filter</span> <span class="ow">or</span> <span class="ow">not</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterBank</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span> <span class="o">//</span> <span class="nb">filter</span> <span class="n">bank</span> <span class="mi">20</span> <span class="ow">in</span> <span class="n">single</span> <span class="n">can</span> <span class="n">peri</span> <span class="n">you</span> <span class="n">can</span> <span class="n">choose</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">13</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterFIFOAssignment</span> <span class="o">=</span> <span class="n">CAN_FILTER_FIFO0</span><span class="p">;</span><span class="o">//</span> <span class="n">FIFO0</span> <span class="ow">and</span> <span class="n">FIFO1</span> <span class="n">so</span> <span class="n">choosing</span> <span class="n">it</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterIdHigh</span> <span class="o">=</span> <span class="mh">0x446</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="p">;</span><span class="o">//</span> <span class="n">Register</span> <span class="k">for</span> <span class="mi">16</span> <span class="n">bits</span> <span class="n">it</span> <span class="n">compare</span> <span class="n">to</span> <span class="n">incoming</span> <span class="n">identifier</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterIdLow</span> <span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="o">//</span> <span class="n">Register</span> <span class="k">for</span> <span class="mi">8</span> <span class="n">bit</span> <span class="n">compare</span> <span class="n">to</span> <span class="n">identifier</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterMaskIdHigh</span> <span class="o">=</span> <span class="mh">0x446</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span><span class="p">;</span>  <span class="o">//</span> <span class="n">Masking</span> <span class="n">the</span> <span class="n">identifier</span> <span class="n">it</span> <span class="n">enable</span> <span class="n">the</span> <span class="n">comparison</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterMaskIdLow</span> <span class="o">=</span> <span class="mh">0x0000</span><span class="p">;</span> <span class="o">//</span> <span class="n">Masking</span> <span class="n">the</span> <span class="nb">filter</span> <span class="n">ID</span> <span class="n">low</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterMode</span> <span class="o">=</span> <span class="n">CAN_FILTERMODE_IDMASK</span><span class="p">;</span> <span class="o">//</span><span class="n">MASK</span> <span class="n">MODE</span> <span class="ow">in</span> <span class="n">Filter</span> <span class="ow">in</span> <span class="n">STM32</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">FilterScale</span> <span class="o">=</span> <span class="n">CAN_FILTERSCALE_32BIT</span><span class="p">;</span>
+<span class="n">canfilterconfig</span><span class="o">.</span><span class="n">SlaveStartFilterBank</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="o">//</span> <span class="n">dual</span> <span class="n">CAN</span> <span class="n">peripheral</span> <span class="n">have</span> <span class="mi">28</span> <span class="n">Filter</span> <span class="n">Banks</span>
+
+<span class="n">HAL_CAN_ConfigFilter</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hscan1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">canfilterconfig</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="rubric" id="id3">RECEIVING
+DATA</p>
+<div class="docutils container" id="id4">
+<p>For recieving the
+data in STM32</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">HAL_CAN_ActivateNotification</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hcan1</span><span class="p">,</span> <span class="n">CAN_IT_RX_FIFO0_MSG_PENDING</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="n">Error_Handler</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAN_RxHeaderTypeDef</span>   <span class="n">RxHeader</span><span class="p">;</span>
+
+<span class="n">uint8_t</span>               <span class="n">RxData</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+
+<span class="n">void</span> <span class="n">HAL_CAN_RxFifo0MsgPendingCallback</span><span class="p">(</span><span class="n">CAN_HandleTypeDef</span> <span class="o">*</span><span class="n">hcan</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">HAL_CAN_GetRxMessage</span><span class="p">(</span><span class="n">hcan</span><span class="p">,</span> <span class="n">CAN_RX_FIFO0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">RxHeader</span><span class="p">,</span> <span class="n">RxData</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HAL_OK</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Error_Handler</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">((</span><span class="n">RxHeader</span><span class="o">.</span><span class="n">StdId</span> <span class="o">==</span> <span class="mh">0x103</span><span class="p">))</span>
+  <span class="p">{</span>
+   <span class="n">datacheck</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<div class="docutils container" id="cdd8">
+<p>you can use like
+this also and you
+can compare it to
+the Identifier of
+the RxHeader</p>
+</div>
+<div class="docutils container" id="id5">
+<p>if it is true you
+can turn on GPIO’s
+pin</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">datacheck</span><span class="p">)</span> <span class="p">{</span> <span class="n">HAL_GPIO_WritePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="p">,</span> <span class="n">GPIO_PIN_SET</span><span class="p">);</span> <span class="p">}</span> <span class="o">//</span> <span class="n">checking</span> <span class="n">datacheck</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/tag/can-protocol">https://archive.ph/o/CnMQt/https://medium.com/tag/can-protocol</a>&gt;`__</p>
+<div class="docutils container">
+<p>Can Protocol</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/tag/can">https://archive.ph/o/CnMQt/https://medium.com/tag/can</a>&gt;`__</p>
+<div class="docutils container">
+<p>Can</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/tag/vlsi">https://archive.ph/o/CnMQt/https://medium.com/tag/vlsi</a>&gt;`__</p>
+<div class="docutils container">
+<p>Vlsi</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/tag/embedded-systems">https://archive.ph/o/CnMQt/https://medium.com/tag/embedded-systems</a>&gt;`__</p>
+<div class="docutils container">
+<p>Embedded Systems</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/tag/software-engineering">https://archive.ph/o/CnMQt/https://medium.com/tag/software-engineering</a>&gt;`__</p>
+<div class="docutils container">
+<p>Software Engineering</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-part-ii-59c9fb75b6e2</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>Follow</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__
+.. rubric:: Written by</p>
+<blockquote>
+<div><p>Harshdixit
+:name: written-by-harshdixit</p>
+</div></blockquote>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/followers">14
+Followers</a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p>Follow</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p class="rubric" id="more-from-harshdixit">More from Harshdixit</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="CAN Protocol in STM32" src="_images/4b30d6ab35b351df3caaf3d05b481c38522be2e5.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p>Harshdixit</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="can-protocol-in-stm32">CAN
+Protocol
+in
+STM32</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="can-controlled-area-network-protocol-is-a-way-of-communication-between-different-devices-but-under-certain-rules-these-rules-must-be">CAN(
+Controlled
+Area
+Network
+)
+Protocol
+is
+a
+way
+of
+communication
+between
+different
+devices,
+but
+under
+certain
+rules.
+These
+rules
+must
+be…</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521</a>&gt;`__</p>
+<div class="docutils container">
+<p>5 min
+read·Jun
+9</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/can-protocol-in-stm32-97bac5a6f521</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Difference Between Reg And Wire In Verilog" src="_images/67557a1474f5f9da51177a35606d6b1b0cf4f814.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p>Harshdixit</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="difference-between-reg-and-wire-in-verilog">Difference
+Between
+Reg
+And
+Wire
+In
+Verilog</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="wire-elements-must-be-continuously-driven-by-something-and-cannot-store-a-value-henceforth-they-are-assigned-values-using-continuous">“Wire”
+elements
+must
+be
+continuously
+driven
+by
+something,
+and
+cannot
+store
+a
+value.
+Henceforth,
+they
+are
+assigned
+values
+using
+continuous…</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849</a>&gt;`__</p>
+<div class="docutils container">
+<p>2 min
+read·Mar
+16</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/difference-between-reg-and-wire-in-verilog-b7484610c849</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="RTOS Programming in Keil IDE for STM32F401RE" src="_images/c69699e8d9aaf7cf9de52ba3ac9b79e01708f9e5.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p>Harshdixit</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="rtos-programming-in-keil-ide-for-stm32f401re">RTOS
+Programming
+in
+Keil
+IDE
+for
+STM32F401RE</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="hi-in-previous-we-had-talk-about-the-rtos-and-what-is-rtos-and-what-are-its-type">Hi ,
+In
+previous
+we
+had
+talk
+about
+the
+RTOS
+and
+what
+is
+RTOS ?
+and
+what
+are
+its
+type ?</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947</a>&gt;`__</p>
+<div class="docutils container">
+<p>4 min
+read·Sep
+6</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/rtos-programming-in-keil-ide-for-stm32f401re-e25e5416a947</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Coding Pulse width Modulation from microcontroller STM32F103C8Tx" src="_images/04d0b32ab6ce911c5df749128ba296d3d4c31b2c.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png"><img alt="Harshdixit" src="_images/7c3b88aae90704e1043d34f2c3086afdf7e433ef.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p>Harshdixit</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx">Coding
+Pulse
+width
+Modulation
+from
+microcontroller
+STM32F103C8Tx</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="read-my-first-article-before-jumping-to-this-article-and-also-take-out-your-pen-and-notes-with-me-to-calculate-frequencies-prescalar">Read
+my
+first
+article
+before
+jumping
+to
+this
+article
+and
+also
+take
+out
+your
+pen
+and
+notes
+with
+me
+to
+calculate
+frequencies ,
+prescalar …</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a</a>&gt;`__</p>
+<div class="docutils container">
+<p>4 min
+read·Aug
+20</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981/coding-pulse-width-modulation-from-microcontroller-stm32f103c8tx-519a4568ac7a</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981">https://archive.ph/o/CnMQt/https://medium.com/&#64;harshdixit1981</a>&gt;`__</p>
+<div class="docutils container">
+<p>See all from Harshdixit</p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p class="rubric" id="recommended-from-medium">Recommended from
+Medium</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Reviewing My Journey Through Embedded Systems So Far" src="8703f5370b0bc1e8d3f8d05f9354b2e27323daad.jpg" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="0824e85ac4dd40ee3283a2282a50b1788adad8ef.jpg"><img alt="Kshitij Vaze" src="0824e85ac4dd40ee3283a2282a50b1788adad8ef.jpg" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze</a>&gt;`__</p>
+<div class="docutils container">
+<p>Kshitij
+Vaze</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="reviewing-my-journey-through-embedded-systems-so-far">Reviewing
+My
+Journey
+Through
+Embedded
+Systems
+So
+Far</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="my-journey-through-embedded-systems">MY
+JOURNEY
+THROUGH
+EMBEDDED
+SYSTEMS</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b</a>&gt;`__</p>
+<div class="docutils container">
+<p>5
+min
+read·Oct
+7</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b">https://archive.ph/o/CnMQt/https://medium.com/&#64;kshitijvaze/reviewing-my-journey-through-embedded-systems-so-far-2ac821274b2b</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Pointers in Embedded C" src="_images/e5bae7e516cbc98c682b5856f008ff9d5fdaa66c.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="2a4215cc919f0c8a53c58ee3f852bd9e43f7978b.jpg"><img alt="Shathira Lakdilu" src="2a4215cc919f0c8a53c58ee3f852bd9e43f7978b.jpg" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu</a>&gt;`__</p>
+<div class="docutils container">
+<p>Shathira
+Lakdilu</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="pointers-in-embedded-c">Pointers
+in
+Embedded
+C</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="pointers-play-a-crucial-role-in-memory-management-serving-as-variables-that-hold-the-address-of-another-variable-and-enabling-the">Pointers
+play
+a
+crucial
+role
+in
+memory
+management,
+serving
+as
+variables
+that
+hold
+the
+address
+of
+another
+variable
+and
+enabling
+the…</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a</a>&gt;`__</p>
+<div class="docutils container">
+<p>3
+min
+read·Nov
+6</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a">https://archive.ph/o/CnMQt/https://medium.com/&#64;shathiralakdilu/pointers-in-embedded-c-a7afa851c84a</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>1</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="rubric" id="lists">Lists</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/general-coding-knowledge-f2d429d4f0cd">https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/general-coding-knowledge-f2d429d4f0cd</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/57916df71e36f4a4f08dc2b6106e06d452039f3a.png"><img alt="image18" src="_images/57916df71e36f4a4f08dc2b6106e06d452039f3a.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="35991f2e4c9463a82b20dbb3ac30b84e241ecd2a.jpg"><img alt="image19" src="35991f2e4c9463a82b20dbb3ac30b84e241ecd2a.jpg" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/476ea74364e5787fe477d53f0f4930ee8ad28d43.png"><img alt="image20" src="_images/476ea74364e5787fe477d53f0f4930ee8ad28d43.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p class="rubric" id="general-coding-knowledge">General
+Coding Knowledge</p>
+<div class="docutils container">
+<p>20 stories·696
+saves</p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;MediumStaff/list/stories-to-help-you-grow-as-a-software-developer-b1d913188c20">https://archive.ph/o/CnMQt/https://medium.com/&#64;MediumStaff/list/stories-to-help-you-grow-as-a-software-developer-b1d913188c20</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="c8cea46d7b1246ba1795549d3ea23868e9503dbd.jpg"><img alt="image21" src="c8cea46d7b1246ba1795549d3ea23868e9503dbd.jpg" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="60fae24f784e526bbe6aefbbfaaf7e518df6f316.jpg"><img alt="image22" src="60fae24f784e526bbe6aefbbfaaf7e518df6f316.jpg" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p class="rubric" id="stories-to-help-you-grow-as-a-software-developer">Stories
+to Help You Grow
+as a Software
+Developer</p>
+<div class="docutils container">
+<p>19 stories·641
+saves</p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/leadership-0cc0d07e2706">https://archive.ph/o/CnMQt/https://eddiebarth.medium.com/list/leadership-0cc0d07e2706</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/38d0bbd38f70a92c593e2a6af37ff257521732e9.png"><img alt="image23" src="_images/38d0bbd38f70a92c593e2a6af37ff257521732e9.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/c68eb641d5648a418bb29e51d3aa54442edc2ed1.png"><img alt="image24" src="_images/c68eb641d5648a418bb29e51d3aa54442edc2ed1.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="44b4bc29ade90724a961386931b2f3b2a6504ae9.jpg"><img alt="Casually dressed colleagues discussing feedback in front of colourful paintings" src="44b4bc29ade90724a961386931b2f3b2a6504ae9.jpg" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p class="rubric" id="leadership">Leadership</p>
+<div class="docutils container">
+<p>39 stories·180
+saves</p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;breanamjones/list/good-product-thinking-25dfb3a0bd21">https://archive.ph/o/CnMQt/https://medium.com/&#64;breanamjones/list/good-product-thinking-25dfb3a0bd21</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="97b36332a45c67d1fc7f69926534628864098d9b.jpg"><img alt="image26" src="97b36332a45c67d1fc7f69926534628864098d9b.jpg" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/a3859db30a89c8c895ec0aebf4b6b42723e5905b.png"><img alt="image27" src="_images/a3859db30a89c8c895ec0aebf4b6b42723e5905b.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<p><a class="reference internal" href="_images/9550fa0f5d4800e632de9a177ec696c810205e39.png"><img alt="image28" src="_images/9550fa0f5d4800e632de9a177ec696c810205e39.png" style="width: 48px; height: 48px;" /></a></p>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p class="rubric" id="good-product-thinking">Good
+Product Thinking</p>
+<div class="docutils container">
+<p>11 stories·388
+saves</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Virtual Destructors &amp; Inheritance in C++" src="_images/67557a1474f5f9da51177a35606d6b1b0cf4f814.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="d0be32ae65ebab011cd94b4467b8d2944e56bbc3.jpg"><img alt="Anthony Wang" src="d0be32ae65ebab011cd94b4467b8d2944e56bbc3.jpg" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604</a>&gt;`__</p>
+<div class="docutils container">
+<p>Anthony
+Wang</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="virtual-destructors-inheritance-in-c">Virtual
+Destructors
+&amp;
+Inheritance
+in
+C++</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="when-we-work-with-inheritance-the-order-of-calling-constructors-and-destructors-can-be-summarized-as-the-following">When
+we
+work
+with
+inheritance,
+the
+order
+of
+calling
+constructors
+and
+destructors
+can
+be
+summarized
+as
+the
+following:</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d</a>&gt;`__</p>
+<div class="docutils container">
+<p>3 min
+read·Aug
+15</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d">https://archive.ph/o/CnMQt/https://medium.com/&#64;anthony0604/virtual-destructors-inheritance-in-c-6d60e3aa893d</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="Digital Signal Processing" src="30de8bbde43a0960444d349528deb2012490c824.jpg" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="fe493602026dfe696399815e3619d7066d9ba5df.jpg"><img alt="Lance Harvie" src="fe493602026dfe696399815e3619d7066d9ba5df.jpg" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime</a>&gt;`__</p>
+<div class="docutils container">
+<p>Lance
+Harvie</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="digital-signal-processing-dsp-in-embedded-systems">Digital
+Signal
+Processing
+(DSP)
+in
+Embedded
+Systems</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="digital-signal-processing-dsp-plays-a-vital-role-in-modern-technology-as-an-essential-component-of-various-electronic-devices-and">Digital
+Signal
+Processing
+(DSP)
+plays
+a
+vital
+role
+in
+modern
+technology.
+As
+an
+essential
+component
+of
+various
+electronic
+devices
+and…</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441</a>&gt;`__</p>
+<div class="docutils container">
+<p>10 min
+read·Aug
+14</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441">https://archive.ph/o/CnMQt/https://medium.com/&#64;lanceharvieruntime/digital-signal-processing-dsp-in-embedded-systems-68b4649ff441</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>1</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="TCP handling in Linux" src="_images/8a066f4cfebc56afbb9645088e9fabade27a1c74.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="be57b8c350a6437b116ac9890874c4e036c1afe9.jpg"><img alt="Dipak Kr das" src="be57b8c350a6437b116ac9890874c4e036c1afe9.jpg" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity</a>&gt;`__</p>
+<div class="docutils container">
+<p>Dipak
+Kr
+das</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="tcp-handling-in-linux">TCP
+handling
+in
+Linux</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="in-the-last-article-i-explained-packet-flow-in-the-linux-kernel-and-netfilter-hooks-this-time-ill-zoom-in-to-the-tcp-part-of-the-network">In
+the
+last
+article
+I
+explained
+packet
+flow
+in
+the
+linux
+kernel
+and
+netfilter
+hooks.
+This
+time
+I’ll
+zoom
+in
+to
+the
+TCP
+part
+of
+the
+network…</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b</a>&gt;`__</p>
+<div class="docutils container">
+<p>9 min
+read·Dec
+12</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b">https://archive.ph/o/CnMQt/https://medium.com/&#64;dd.identity/tcp-handling-in-linux-cc864f35818b</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4</a>&gt;`__</p>
+<div class="docutils container">
+<p><img alt="What is Firmware and Kernel ?" src="_images/e0cd6a218482d5543be3ba09e9ed6818dcb1f8e4.png" /></p>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman</a>&gt;`__</p>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/a7c807c316fd0407f6cd15041271d922ffb8b5a8.png"><img alt="Anshuman bansal" src="_images/a7c807c316fd0407f6cd15041271d922ffb8b5a8.png" style="width: 20px; height: 20px;" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman</a>&gt;`__</p>
+<div class="docutils container">
+<p>Anshuman
+bansal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4</a>&gt;`__</p>
+<div class="docutils container">
+<p class="rubric" id="what-is-firmware-and-kernel">What
+is
+Firmware
+and
+Kernel ?</p>
+</div>
+<div class="docutils container">
+<p class="rubric" id="previouly-we-have-used-firmware-and-kernel-both-so-lets-understand-indepth-difference">Previouly
+we
+have
+used
+Firmware
+and
+Kernel
+both
+so
+lets
+understand
+indepth
+difference.</p>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4</a>&gt;`__</p>
+<div class="docutils container">
+<p>3 min
+read·Sep
+16</p>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4">https://archive.ph/o/CnMQt/https://medium.com/&#64;TheAnshuman/what-is-firmware-and-kernel-4115708ac4f4</a>&gt;`__</p>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>4</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/">https://archive.ph/o/CnMQt/https://medium.com/</a>&gt;`__</p>
+<div class="docutils container">
+<p>See more recommendations</p>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://help.medium.com/hc/en-us">https://archive.ph/o/CnMQt/https://help.medium.com/hc/en-us</a>&gt;`__</p>
+<div class="docutils container">
+<p>Help</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.statuspage.io/">https://archive.ph/o/CnMQt/https://medium.statuspage.io/</a>&gt;`__</p>
+<div class="docutils container">
+<p>Status</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/about">https://archive.ph/o/CnMQt/https://medium.com/about</a>&gt;`__</p>
+<div class="docutils container">
+<p>About</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e">https://archive.ph/o/CnMQt/https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e</a>&gt;`__</p>
+<div class="docutils container">
+<p>Careers</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://blog.medium.com/">https://archive.ph/o/CnMQt/https://blog.medium.com/</a>&gt;`__</p>
+<div class="docutils container">
+<p>Blog</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://policy.medium.com/medium-privacy-policy-f03bf92035c9">https://archive.ph/o/CnMQt/https://policy.medium.com/medium-privacy-policy-f03bf92035c9</a>&gt;`__</p>
+<div class="docutils container">
+<p>Privacy</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://policy.medium.com/medium-terms-of-service-9db0094a1e0f">https://archive.ph/o/CnMQt/https://policy.medium.com/medium-terms-of-service-9db0094a1e0f</a>&gt;`__</p>
+<div class="docutils container">
+<p>Terms</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://speechify.com/medium">https://archive.ph/o/CnMQt/https://speechify.com/medium</a>&gt;`__</p>
+<div class="docutils container">
+<p>Text to speech</p>
+</div>
+</div>
+<div class="docutils container">
+<p>` &lt;<a class="reference external" href="https://archive.ph/o/CnMQt/https://medium.com/business">https://archive.ph/o/CnMQt/https://medium.com/business</a>&gt;`__</p>
+<div class="docutils container">
+<p>Teams</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference external" href="#0%">0%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#5%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#10%">10%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#15%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#20%">20%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#25%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#30%">30%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#35%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#40%">40%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#45%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#50%">50%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#55%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#60%">60%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#65%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#70%">70%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#75%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#80%">80%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#85%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#90%">90%</a></p></td>
+</tr>
+<tr class="row-even"><td><p>`  &lt;#95%&gt;`__</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="#100%">100%</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="docutils container">
+<p><a class="reference internal" href="_images/25d8043336eb799e52b1a0e15ff6b95e09c24e35.gif"><img alt="image37" src="_images/25d8043336eb799e52b1a0e15ff6b95e09c24e35.gif" style="width: 1px; height: 1px;" /></a></p>
+</div>
+<div class="docutils container" id="stickypbmodal581">
+<p>×</p>
+</div>
+<div class="docutils container" id="stickypbmodal582">
+<p>×</p>
+</div>
+<div class="docutils container" id="stickypbmodal583">
+<div class="docutils container" id="stickypbmodalinner583">
+<p>×</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="canbus-opencm3.html">STM32 &amp; OpenCM3 Part 3:</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="canbus-opencm3.html" title="previous chapter">STM32 &amp; OpenCM3 Part 3:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/sample.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

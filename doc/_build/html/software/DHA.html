@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) . &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GGD-DHA ( Generic Global Diagnostic - Hacking ) ." href="DHA-hack.html" />
+    <link rel="prev" title="Volvo VIDA" href="vida.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ggd-dha-generic-global-diagnostic-diagnostic-host-application">
+<h1>GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) .<a class="headerlink" href="#ggd-dha-generic-global-diagnostic-diagnostic-host-application" title="Permalink to this headline">¶</a></h1>
+<p>“GGD DHA is a system used when developing systems in cars. This program contains all
+variables that are transferred within the car. It can access all variables and commands allowing
+reading and/or writing to these variables. It is also possible to read DTCs, part numbers,
+upload new software to the different modules etc. This system is useful when testing new
+systems since in VIDA you do not have access to all variables, which you have in GGD DHA,
+but in GGD DHA you do not get access to the technical description of how you replace parts,
+troubleshooting etc. However, in GGD DHA it is possible to create automatic sequences that
+read or write to the variables making it unnecessary to be at the computer all the time. When
+writing to a variable, it is possible to set the sensor values to the required values making it
+possible to simulate different conditions in a car even if the conditions have not occurred.”</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/1Guan662vouIs1bkY1W7K2SAEcnkzm8A0/view">https://drive.google.com/file/d/1Guan662vouIs1bkY1W7K2SAEcnkzm8A0/view</a></p>
+<p>This software uses databases in (ddb or dds) format.
+After opening, you can send individual messages.</p>
+<img alt="../_images/DHA.png" src="../_images/DHA.png" />
+<p>In the Volvo Diagnostic Host Application, you can save the data in text format.</p>
+<p>Peeking in this database (P1005_(D2)_0520_TO1_050202.DDB) give some insight in how the Volvo Can messaging works.</p>
+<p>This example is for reading the VIN number</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DIAG_ITEM [NAME=VIN][SEND_ABLE=TRUE][NOTE=] [FORMAT=OTHER:2] [BASE=HEX] [VALUE=E9] [TYPE=BLOFF][INPUT=FALSE]
+BEGIN
+  RESPONSE_ITEM [NAME=VIN .][SEND_ABLE=FALSE][NOTE=VIN] [NO_OF_BYTES=17] [OFFSET=2] [MASK=] [UNIT=.] [PRECISION=0] [SIGNED=U] [BASE=ASCII] [FORMULA=*1] [COMP_VALUE=] [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE]
+END
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Volvo Diagnostic Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vida.html">Volvo VIDA</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GGD-DHA ( Generic Global Diagnostic - Diagnostic Host Application ) .</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DHA-hack.html">GGD-DHA ( Generic Global Diagnostic - Hacking ) .</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Volvo Diagnostic Software</a><ul>
+      <li>Previous: <a href="vida.html" title="previous chapter">Volvo VIDA</a></li>
+      <li>Next: <a href="DHA-hack.html" title="next chapter">GGD-DHA ( Generic Global Diagnostic - Hacking ) .</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/software/DHA.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

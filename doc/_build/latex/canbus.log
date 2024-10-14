@@ -1,0 +1,1267 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.19)  14 OCT 2024 15:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**canbus.tex
+(./canbus.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./sphinxmanual.cls
+Document Class: sphinxmanual 2019/12/01 v2.3.0 Document class (Sphinx manual)
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+LaTeX Info: Redefining \and on input line 35.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+2500 (decimal 9472)
+   defining Unicode char U+2502 (decimal 9474)
+   defining Unicode char U+2514 (decimal 9492)
+   defining Unicode char U+251C (decimal 9500)
+   defining Unicode char U+2572 (decimal 9586)
+
+(/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+<<t1.cmap>>)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen139
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks19
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks20
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+\babel@savecnt=\count272
+\U@D=\dimen148
+\l@unhyphenated=\language3
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count273
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+))
+(/usr/share/texmf/tex/latex/tex-gyre/tgtermes.sty
+Package: tgtermes 2009/09/27 v1.2 TeX Gyre Termes as default roman family
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)))
+(/usr/share/texmf/tex/latex/tex-gyre/tgheros.sty
+Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip52
+\mylen=\skip53
+\myhi=\skip54
+\px=\skip55
+\py=\skip56
+\pyy=\skip57
+\pxx=\skip58
+\c@AlphaCnt=\count274
+\c@AlphaDecCnt=\count275
+) (./sphinx.sty
+Package: sphinx 2021/01/27 v4.0.0 LaTeX package (Sphinx markup)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+\sphinxverbatimsep=\dimen149
+\sphinxverbatimborder=\dimen150
+\sphinxshadowsep=\dimen151
+\sphinxshadowsize=\dimen152
+\sphinxshadowrule=\dimen153
+\spx@notice@border=\dimen154
+
+(./sphinxoptionshyperref.sty
+File: sphinxoptionshyperref.sty 2021/01/27 hyperref
+) (./sphinxoptionsgeometry.sty
+File: sphinxoptionsgeometry.sty 2021/01/27 geometry
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count276
+\float@exts=\toks24
+\float@box=\box52
+\@float@everytoks=\toks25
+\@floatcapt=\box53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen155
+\WF@size=\dimen156
+\c@WF@wrappedlines=\count277
+\WF@box=\box54
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count278
+\mult@box=\box55
+\multicol@leftmargin=\dimen157
+\c@unbalance=\count279
+\c@collectmore=\count280
+\doublecol@number=\count281
+\multicoltolerance=\count282
+\multicolpretolerance=\count283
+\full@width=\dimen158
+\page@free=\dimen159
+\premulticols=\dimen160
+\postmulticols=\dimen161
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen162
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@firstbox=\box60
+\mult@gfirstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\c@minrows=\count284
+\c@columnbadness=\count285
+\c@finalcolumnbadness=\count286
+\last@try=\dimen163
+\multicolovershoot=\dimen164
+\multicolundershoot=\dimen165
+\mult@nat@firstbox=\box98
+\colbreak@box=\box99
+\mc@col@check@num=\count287
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+)
+(./sphinxlatexgraphics.sty
+File: sphinxlatexgraphics.sty 2021/01/27 graphics
+\spx@image@maxheight=\dimen168
+\spx@image@box=\box100
+) (./sphinxlatexadmonitions.sty
+File: sphinxlatexadmonitions.sty 2021/01/27 admonitions
+
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip61
+\fb@frw=\dimen169
+\fb@frh=\dimen170
+\FrameRule=\dimen171
+\FrameSep=\dimen172
+))
+(./sphinxlatexliterals.sty
+File: sphinxlatexliterals.sty 2021/01/27 code-blocks and parsed literals
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+\FV@CodeLineNo=\count288
+\FV@InFile=\read3
+\FV@TabBox=\box101
+\c@FancyVerbLine=\count289
+\FV@StepNumber=\count290
+\FV@OutFile=\write3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\sphinxcontinuationbox=\box102
+\sphinxvisiblespacebox=\box103
+\sphinxVerbatim@TitleBox=\box104
+\sphinxVerbatim@ContentsBox=\box105
+\spx@scratchbox=\box106
+)
+(./sphinxlatexshadowbox.sty
+File: sphinxlatexshadowbox.sty 2021/01/27 sphinxShadowBox
+) (./sphinxlatexcontainers.sty
+File: sphinxlatexcontainers.sty 2021/05/03 containers
+)
+(./sphinxhighlight.sty
+Package: sphinxhighlight 2016/05/29 stylesheet for highlighting with pygments
+) (./sphinxlatextables.sty
+File: sphinxlatextables.sty 2021/01/27 tables
+
+(/usr/share/texlive/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box107
+\extrarowheight=\dimen174
+\NC@list=\toks27
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box108
+)
+\TY@count=\count291
+\TY@linewidth=\dimen175
+\tymin=\dimen176
+\tymax=\dimen177
+\TY@tablewidth=\dimen178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip64
+\LTright=\skip65
+\LTpre=\skip66
+\LTpost=\skip67
+\LTchunksize=\count292
+\LTcapwidth=\dimen179
+\LT@head=\box109
+\LT@firsthead=\box110
+\LT@foot=\box111
+\LT@lastfoot=\box112
+\LT@gbox=\box113
+\LT@cols=\count293
+\LT@rows=\count294
+\c@LT@tables=\count295
+\c@LT@chunks=\count296
+\LT@p@ftn=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box114
+\sift@deathcycles=\count297
+\@vwid@loff=\dimen180
+\@vwid@roff=\dimen181
+)
+\sphinx@TY@tablewidth=\dimen182
+)
+(./sphinxlatexnumfig.sty
+File: sphinxlatexnumfig.sty 2021/01/27 numbering
+) (./sphinxlatexlists.sty
+File: sphinxlatexlists.sty 2021/01/27 lists
+)
+\c@sphinxscope=\count298
+\c@sphinxexplicit=\count299
+ (./sphinxpackagefootnote.sty
+Package: sphinxpackagefootnote 2021/02/04 v1.1d footnotehyper adapted to sphinx
+ (Sphinx team)
+\FNH@notes=\box115
+\FNH@toks=\toks29
+\FNH@width=\dimen183
+) (./sphinxlatexindbibtoc.sty
+File: sphinxlatexindbibtoc.sty 2021/01/27 index, bib., toc
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+))
+(./sphinxlatexstylepage.sty
+File: sphinxlatexstylepage.sty 2021/01/27 page styling
+
+(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Rollback for package 'parskip' requested -> version 'v1'.
+         This corresponds to the release introduced on 2001-04-09.
+
+(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip-2001-04-09.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip68
+\f@nch@O@elh=\skip69
+\f@nch@O@erh=\skip70
+\f@nch@O@olh=\skip71
+\f@nch@O@orh=\skip72
+\f@nch@O@elf=\skip73
+\f@nch@O@erf=\skip74
+\f@nch@O@olf=\skip75
+\f@nch@O@orf=\skip76
+))
+(./sphinxlatexstyleheadings.sty
+File: sphinxlatexstyleheadings.sty 2021/01/27 headings
+
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box116
+\beforetitleunit=\skip77
+\aftertitleunit=\skip78
+\ttl@plus=\dimen184
+\ttl@minus=\dimen185
+\ttl@toksa=\toks30
+\titlewidth=\dimen186
+\titlewidthlast=\dimen187
+\titlewidthfirst=\dimen188
+))
+(./sphinxlatexstyletext.sty
+File: sphinxlatexstyletext.sty 2021/01/27 text styling
+) (./sphinxlatexobjects.sty
+File: sphinxlatexobjects.sty 2021/01/27 documentation environments
+\py@argswidth=\skip79
+\lineblockindentation=\skip80
+\DUlineblockindent=\skip81
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count300
+\Gm@cntv=\count301
+\c@Gm@tempcnt=\count302
+\Gm@bindingoffset=\dimen189
+\Gm@wd@mp=\dimen190
+\Gm@odd@mp=\dimen191
+\Gm@even@mp=\dimen192
+\Gm@layoutwidth=\dimen193
+\Gm@layoutheight=\dimen194
+\Gm@layouthoffset=\dimen195
+\Gm@layoutvoffset=\dimen196
+\Gm@dimlist=\toks31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen197
+\Hy@linkcounter=\count303
+\Hy@pagecounter=\count304
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count305
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count306
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen198
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count307
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring ON on input line 6094.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count308
+\c@Item=\count309
+\c@Hfootnote=\count310
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip82
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+)
+(./sphinxmessages.sty
+Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
+)
+\@indexfile=\write4
+\openout4 = `canbus.idx'.
+
+
+Writing index file canbus.idx
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 70
+.
+(/usr/share/texmf/tex/latex/tex-gyre/t1qtm.fd
+File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count313
+\l__pdf_internal_box=\box117
+)
+(./canbus.aux)
+\openout1 = `canbus.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count314
+\scratchdimen=\dimen257
+\scratchbox=\box118
+\nofMPsegments=\count315
+\nofMParguments=\count316
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen258
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
+\everyMPtoPDFconversion=\toks33
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@literalblock=\count320
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=36.135pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 70.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count321
+)
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
+
+(./canbus.out) (./canbus.out)
+\@outlinefile=\write5
+\openout5 = `canbus.out'.
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 73.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 73
+.
+ (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
+File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
+)<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+
+] (./canbus.toc [1
+
+])
+\tf@toc=\write6
+\openout6 = `canbus.toc'.
+
+ [2]
+Chapter 1.
+[1
+
+
+] [2
+
+]
+Chapter 2.
+<can-hs-ls.png, id=552, 856.70062pt x 385.44pt>
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
+46.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+File: can-hs-ls.png Graphic file (type png)
+<use can-hs-ls.png>
+Package pdftex.def Info: can-hs-ls.png  used on input line 146.
+(pdftex.def)             Requested size: 469.74886pt x 211.3457pt.
+<networks.png, id=554, 429.85594pt x 252.19218pt>
+File: networks.png Graphic file (type png)
+<use networks.png>
+Package pdftex.def Info: networks.png  used on input line 151.
+(pdftex.def)             Requested size: 429.85489pt x 252.19156pt.
+ [3 <./can-hs-ls.png>]
+<modules-overview.png, id=561, 376.40625pt x 255.95625pt>
+File: modules-overview.png Graphic file (type png)
+<use modules-overview.png>
+Package pdftex.def Info: modules-overview.png  used on input line 171.
+(pdftex.def)             Requested size: 376.40532pt x 255.95561pt.
+ [4 <./networks.png>]
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 1
+76.
+ (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
+File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
+)
+<module-id.png, id=567, 144.54pt x 144.54pt>
+File: module-id.png Graphic file (type png)
+<use module-id.png>
+Package pdftex.def Info: module-id.png  used on input line 190.
+(pdftex.def)             Requested size: 144.53963pt x 144.53963pt.
+
+[5 <./modules-overview.png> <./module-id.png>] [6] [7]
+<can_signalling.png, id=584, 840.13875pt x 319.94531pt>
+File: can_signalling.png Graphic file (type png)
+<use can_signalling.png>
+Package pdftex.def Info: can_signalling.png  used on input line 1023.
+(pdftex.def)             Requested size: 469.7566pt x 178.89474pt.
+ [8]
+<can_frame.png, id=590, 836.12375pt x 296.10625pt>
+File: can_frame.png Graphic file (type png)
+<use can_frame.png>
+Package pdftex.def Info: can_frame.png  used on input line 1025.
+(pdftex.def)             Requested size: 469.76985pt x 166.36507pt.
+<filter_banks.png, id=591, 1904.11375pt x 1552.80125pt>
+File: filter_banks.png Graphic file (type png)
+<use filter_banks.png>
+Package pdftex.def Info: filter_banks.png  used on input line 1027.
+(pdftex.def)             Requested size: 469.75153pt x 383.0815pt.
+ [9 <./can_signalling.png> <./can_frame.png>] [10 <./filter_banks.png (PNG copy
+)>]
+Chapter 3.
+[11
+
+]
+Overfull \vbox (2.45175pt too high) detected at line 1150
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1158
+\T1/qtm/m/n/10 this could be a record of in-ter-est : CEM,Central elec-tronic m
+od-ule (CEM),Read high beam re-
+ []
+
+<DHA.png, id=624, 637.38126pt x 407.5225pt>
+File: DHA.png Graphic file (type png)
+<use DHA.png>
+Package pdftex.def Info: DHA.png  used on input line 1191.
+(pdftex.def)             Requested size: 469.75824pt x 300.36179pt.
+[13] [14 <./DHA.png>]
+<dha-hack.png, id=634, 725.71124pt x 353.06906pt>
+File: dha-hack.png Graphic file (type png)
+<use dha-hack.png>
+Package pdftex.def Info: dha-hack.png  used on input line 1231.
+(pdftex.def)             Requested size: 469.76886pt x 228.54398pt.
+ [15 <./dha-hack.png>] [16
+
+]
+Chapter 4.
+<ecuvariant.png, id=645, 908.39375pt x 643.40375pt>
+File: ecuvariant.png Graphic file (type png)
+<use ecuvariant.png>
+Package pdftex.def Info: ecuvariant.png  used on input line 1268.
+(pdftex.def)             Requested size: 469.76161pt x 332.72618pt.
+[17] [18 <./ecuvariant.png>]
+<block.png, id=657, 765.86125pt x 639.38875pt>
+File: block.png Graphic file (type png)
+<use block.png>
+Package pdftex.def Info: block.png  used on input line 1331.
+(pdftex.def)             Requested size: 469.75731pt x 392.1827pt.
+ [19 <./block.png>]
+<ScriptCarFunction.png, id=663, 426.09187pt x 452.4403pt>
+File: ScriptCarFunction.png Graphic file (type png)
+<use ScriptCarFunction.png>
+Package pdftex.def Info: ScriptCarFunction.png  used on input line 1357.
+(pdftex.def)             Requested size: 426.09082pt x 452.43921pt.
+ [20] [21 <./ScriptCarFunction.png>] [22]
+Chapter 5.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 1508.
+
+LaTeX Font Info:    Trying to load font information for TS1+txtt on input line 
+1513.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
+File: ts1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 1518.
+
+LaTeX Font Info:    Font shape `TS1/txtt/m/it' in size <10> not available
+(Font)              Font shape `TS1/txtt/m/sl' tried instead on input line 1518
+.
+ [23
+
+] [24] [25]
+[26
+
+]
+Chapter 6.
+<vin.png, id=698, 931.22906pt x 36.135pt>
+File: vin.png Graphic file (type png)
+<use vin.png>
+Package pdftex.def Info: vin.png  used on input line 1697.
+(pdftex.def)             Requested size: 469.74832pt x 18.22789pt.
+[27 <./vin.png>] [28] [29] [30
+
+]
+Chapter 7.
+<savvycan.png, id=717, 791.95876pt x 156.585pt>
+File: savvycan.png Graphic file (type png)
+<use savvycan.png>
+Package pdftex.def Info: savvycan.png  used on input line 1832.
+(pdftex.def)             Requested size: 469.76515pt x 92.88132pt.
+[31 <./savvycan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+[]\T1/qtm/m/n/10 RE-SPONSE_ITEM [NAME=IgnitionKeyPos Ig-ni-tion key not in-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 serted][SEND_ABLE=FALSE][NOTE=IgnitionKeyPos] [NO_OF_BYTES=1] [O
+FF-
+ []
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 SET=3] [MASK=] [UNIT=Ignition key not in-serted] [PRE-CI-SION=2]
+ [SIGNED=U]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [BASE=DEC] [FOR-MULA=x&0b00000111] [COMP_VALUE==0b00000000]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE] RE-SPONSE_ITEM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NAME=IgnitionKeyPos Pos 0][SEND_ABLE=FALSE][NOTE=IgnitionKeyPos
+]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [BASE=DEC] [FOR-MULA=x&0b00000111] [COMP_VALUE==0b00000100]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE] RE-SPONSE_ITEM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NAME=IgnitionKeyPos Pos I][SEND_ABLE=FALSE][NOTE=IgnitionKeyPos
+]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [BASE=DEC] [FOR-MULA=x&0b00000111] [COMP_VALUE==0b00000101]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE] RE-SPONSE_ITEM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NAME=IgnitionKeyPos Pos II][SEND_ABLE=FALSE][NOTE=IgnitionKeyPo
+s]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [BASE=DEC] [FOR-MULA=x&0b00000111] [COMP_VALUE==0b00000110]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE] RE-SPONSE_ITEM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NAME=IgnitionKeyPos Pos III][SEND_ABLE=FALSE][NOTE=IgnitionKeyP
+os]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [BASE=DEC] [FOR-MULA=x&0b00000111] [COMP_VALUE==0b00000111]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [DEP_RESPITEM=CHECKOK] [DEP_RESPITEM_CHECK=TRUE] RE-SPONSE_ITEM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NAME=IgnitionKeyPosQF ][SEND_ABLE=FALSE][NOTE=IgnitionKeyPosQF]
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [NO_OF_BYTES=1] [OFF-SET=3] [MASK=] [UNIT=] [PRE-CI-SION=2]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1898--1905
+\T1/qtm/m/n/10 [SIGNED=U] [BASE=DEC] [FOR-MULA=x&0b00011000/8] [COMP_VALUE=]
+ []
+
+[32]
+Overfull \hbox (114.25497pt too wide) in paragraph at lines 1942--1942
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1942--1942
+
+ []
+
+
+Overfull \hbox (168.33504pt too wide) in paragraph at lines 1957--1960
+[]
+ []
+
+
+Overfull \hbox (219.87498pt too wide) in paragraph at lines 1957--1960
+\T1/qtm/m/n/10 <Re-sponse Mes-sage=^^QF9F80000000092870000000000000000000000000
+00000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000^^Q/> 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1963--1966
+[]\T1/qtm/m/n/10 </Re-quest> <Re-quest EcuAd-dress=^^Q50^^Q Di-ag-nos-tic-PartN
+o=^^Q31254684 AC^^Q Com-
+ []
+
+
+Overfull \hbox (110.10504pt too wide) in paragraph at lines 1968--1970
+[]\T1/qtm/m/n/10 <Re-sponse Mes-sage=^^QF9F500312546782041430000440000312961972
+0414100004000003129611020414100FE8000^^Q/> 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1972--1975
+[]\T1/qtm/m/n/10 </Re-quest> <Re-quest EcuAd-dress=^^Q50^^Q Di-ag-nos-tic-PartN
+o=^^Q31254684 AC^^Q Com-
+ []
+
+
+Overfull \hbox (326.35497pt too wide) in paragraph at lines 1977--1979
+[]\T1/qtm/m/n/10 <Re-sponse Mes-sage=^^QF9F700307720412020200031253518202041070
+60504032020420000000000202020FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0030781342204141^^
+Q/> 
+ []
+
+[33] [34
+
+]
+Chapter 8.
+[35] [36] [37] [38]
+Chapter 9.
+[39
+
+] [40]
+<bootloader.png, id=762, 423.08063pt x 359.84438pt>
+File: bootloader.png Graphic file (type png)
+<use bootloader.png>
+Package pdftex.def Info: bootloader.png  used on input line 2448.
+(pdftex.def)             Requested size: 423.07959pt x 359.84349pt.
+ [41 <./bootloader.png>]
+<key1.png, id=768, 998.9822pt x 749.04843pt>
+File: key1.png Graphic file (type png)
+<use key1.png>
+Package pdftex.def Info: key1.png  used on input line 2488.
+(pdftex.def)             Requested size: 469.75035pt x 352.22426pt.
+ [42]
+<key2.png, id=773, 998.9822pt x 749.04843pt>
+File: key2.png Graphic file (type png)
+<use key2.png>
+Package pdftex.def Info: key2.png  used on input line 2490.
+(pdftex.def)             Requested size: 469.75035pt x 352.22426pt.
+ [43 <./key1.png>]
+<key3.png, id=779, 998.9822pt x 749.04843pt>
+File: key3.png Graphic file (type png)
+<use key3.png>
+Package pdftex.def Info: key3.png  used on input line 2498.
+(pdftex.def)             Requested size: 469.75035pt x 352.22426pt.
+ [44 <./key2.png>]
+[45 <./key3.png>] [46
+
+]
+Chapter 10.
+[47] [48
+
+]
+Chapter 11.
+[49] [50]
+Chapter 12.
+[51
+
+] [52
+
+]
+Chapter 13.
+<canbitsbauds.png, id=825, 605.26125pt x 367.3725pt>
+File: canbitsbauds.png Graphic file (type png)
+<use canbitsbauds.png>
+Package pdftex.def Info: canbitsbauds.png  used on input line 2655.
+(pdftex.def)             Requested size: 469.75603pt x 285.14236pt.
+[53 <./canbitsbauds.png>] [54]
+Chapter 14.
+<board.png, id=836, 609.77812pt x 422.32782pt>
+File: board.png Graphic file (type png)
+<use board.png>
+Package pdftex.def Info: board.png  used on input line 2703.
+(pdftex.def)             Requested size: 469.77252pt x 325.35452pt.
+<board-usage.png, id=837, 563.10374pt x 813.0375pt>
+File: board-usage.png Graphic file (type png)
+<use board-usage.png>
+Package pdftex.def Info: board-usage.png  used on input line 2705.
+(pdftex.def)             Requested size: 450.48361pt x 650.4557pt.
+[55
+
+ <./board.png>]
+<pulseview.png, id=843, 963.6pt x 578.91281pt>
+File: pulseview.png Graphic file (type png)
+<use pulseview.png>
+Package pdftex.def Info: pulseview.png  used on input line 2707.
+(pdftex.def)             Requested size: 469.75679pt x 282.22107pt.
+ [56 <./board-usage.png>]
+<pulseview-can.png, id=849, 1284.8pt x 771.88374pt>
+File: pulseview-can.png Graphic file (type png)
+<use pulseview-can.png>
+Package pdftex.def Info: pulseview-can.png  used on input line 2709.
+(pdftex.def)             Requested size: 469.74208pt x 282.21223pt.
+ [57 <./pulseview.png> <./pulseview-can.png>]
+<bluepill.png, id=857, 1174.3875pt x 819.06pt>
+File: bluepill.png Graphic file (type png)
+<use bluepill.png>
+Package pdftex.def Info: bluepill.png  used on input line 2714.
+(pdftex.def)             Requested size: 469.74669pt x 327.63069pt.
+
+Overfull \vbox (3.28018pt too high) detected at line 2752
+ []
+
+[58 <./bluepill.png>]
+<stm32f429i-board-CAN2.png, id=863, 465.74pt x 819.06pt>
+File: stm32f429i-board-CAN2.png Graphic file (type png)
+<use stm32f429i-board-CAN2.png>
+Package pdftex.def Info: stm32f429i-board-CAN2.png  used on input line 2757.
+(pdftex.def)             Requested size: 369.86357pt x 650.47472pt.
+ [59] [60]
+Overfull \vbox (27.6568pt too high) has occurred while \output is active []
+
+
+[61 <./stm32f429i-board-CAN2.png>]
+<stm32f429i-left.png, id=878, 544.28343pt x 477.28313pt>
+File: stm32f429i-left.png Graphic file (type png)
+<use stm32f429i-left.png>
+Package pdftex.def Info: stm32f429i-left.png  used on input line 2762.
+(pdftex.def)             Requested size: 469.75226pt x 411.92659pt.
+<stm32f429i-right.png, id=879, 547.2947pt x 468.24937pt>
+File: stm32f429i-right.png Graphic file (type png)
+<use stm32f429i-right.png>
+Package pdftex.def Info: stm32f429i-right.png  used on input line 2767.
+(pdftex.def)             Requested size: 469.76234pt x 401.92924pt.
+ [62 <./stm32f429i-left.png>] [63 <./stm32f429i-right.png>]
+<orangepi2E-serialport.png, id=891, 637.38126pt x 661.47125pt>
+File: orangepi2E-serialport.png Graphic file (type png)
+<use orangepi2E-serialport.png>
+Package pdftex.def Info: orangepi2E-serialport.png  used on input line 2781.
+(pdftex.def)             Requested size: 469.75824pt x 487.50279pt.
+ [64 <./orangepi2E-serialport.png>]
+Chapter 15.
+[65
+
+]
+<3xstm32_bb.png, id=907, 336.457pt x 212.795pt>
+File: 3xstm32_bb.png Graphic file (type png)
+<use 3xstm32_bb.png>
+Package pdftex.def Info: 3xstm32_bb.png  used on input line 2884.
+(pdftex.def)             Requested size: 336.45618pt x 212.79446pt.
+ [66 <./3xstm32_bb.png>]
+Chapter 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2900--2902
+[][][]$\T1/qtm/m/n/10 https : / / learn . microsoft . com / en-[]us / sql / lin
+ux / quickstart-[]install-[]connect-[]ubuntu ? view = sql-[]server-[]ver16 & ta
+bs =
+ []
+
+[67
+
+]
+<pulseview-how.png, id=921, 1031.855pt x 481.8pt>
+File: pulseview-how.png Graphic file (type png)
+<use pulseview-how.png>
+Package pdftex.def Info: pulseview-how.png  used on input line 3030.
+(pdftex.def)             Requested size: 469.74667pt x 219.33696pt.
+<logic-analyzer.png, id=922, 1434.35875pt x 344.28625pt>
+File: logic-analyzer.png Graphic file (type png)
+<use logic-analyzer.png>
+Package pdftex.def Info: logic-analyzer.png  used on input line 3035.
+(pdftex.def)             Requested size: 469.75047pt x 112.75325pt.
+ [68 <./pulseview-how.png>] [69 <./logic-analyzer.png>]
+<savvycan-config.png, id=936, 326.72063pt x 440.39531pt>
+File: savvycan-config.png Graphic file (type png)
+<use savvycan-config.png>
+Package pdftex.def Info: savvycan-config.png  used on input line 3101.
+(pdftex.def)             Requested size: 326.71982pt x 440.39423pt.
+<savvycan-playback.png, id=937, 562.35094pt x 494.59781pt>
+File: savvycan-playback.png Graphic file (type png)
+<use savvycan-playback.png>
+Package pdftex.def Info: savvycan-playback.png  used on input line 3106.
+(pdftex.def)             Requested size: 469.75443pt x 413.1575pt.
+ [70 <./savvycan-config.png>] [71 <./savvycan-playback.png>] [72
+
+]
+Chapter 17.
+(./canbus.ind) [73] (./canbus.aux)
+Package rerunfilecheck Info: File `canbus.out' has not changed.
+(rerunfilecheck)             Checksum: C10AAC4940C11F7FC301A9E658DB24ED;18933.
+ ) 
+Here is how much of TeX's memory you used:
+ 15323 strings out of 480247
+ 245665 string characters out of 5896151
+ 597993 words of memory out of 5000000
+ 32664 multiletter control sequences out of 15000+600000
+ 526675 words of font info for 75 fonts, out of 8000000 for 9000
+ 15 hyphenation exceptions out of 8191
+ 70i,12n,76p,738b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-
+ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/
+public/tex-gyre/qhvbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pf
+b></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/font
+s/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/
+qtmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/txfonts/tcxtt.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb>
+Output written on canbus.pdf (77 pages, 9189414 bytes).
+PDF statistics:
+ 1052 PDF objects out of 1200 (max. 8388607)
+ 878 compressed objects within 9 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 1050 words of extra memory for PDF output out of 10000 (max. 10000000)
+

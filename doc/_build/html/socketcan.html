@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>What is a SocketCAN Interface? &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Linux at home" href="linux/index.html" />
+    <link rel="prev" title="using a serial port" href="stm/serial.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="what-is-a-socketcan-interface">
+<h1>What is a SocketCAN Interface?<a class="headerlink" href="#what-is-a-socketcan-interface" title="Permalink to this headline">¶</a></h1>
+<p>SocketCAN is a set of open-source CAN drivers and a networking stack contributed by Volkswagen Research to the Linux kernel. CAN (Controller Area Network) is a standard communication protocol used in embedded systems such as automotive and industrial applications for message-based communication between microcontrollers and other devices.</p>
+<p>SocketCAN provides a standardized API (Application Programming Interface) for CAN communication in the Linux environment. It allows applications to communicate with CAN devices using a set of socket-based interfaces similar to those used for networking. This abstraction makes it easier for developers to work with CAN devices, as they can use familiar socket programming techniques.</p>
+<p>Key features of SocketCAN include:</p>
+<ol class="arabic simple">
+<li><p><strong>Standardized API</strong>: SocketCAN provides a consistent API for CAN communication, making it easier for developers to write applications that work with different CAN devices.</p></li>
+<li><p><strong>Socket-based Interface</strong>: Applications interact with CAN devices using sockets, which allows for easy integration into existing network programming paradigms.</p></li>
+<li><p><strong>Support for Multiple CAN Devices</strong>: SocketCAN supports multiple CAN devices simultaneously, allowing for complex CAN networks to be easily managed.</p></li>
+<li><p><strong>Integration with Linux Kernel</strong>: SocketCAN is integrated into the Linux kernel, making it readily available on Linux-based systems without the need for additional drivers.</p></li>
+</ol>
+<p>Overall, SocketCAN simplifies the development of applications that need to communicate over CAN networks on Linux systems, providing a standardized and efficient interface for CAN communication.</p>
+<section id="configuring-socketcan-interface-stm32multiserial">
+<h2>Configuring SocketCAN interface : stm32multiserial<a class="headerlink" href="#configuring-socketcan-interface-stm32multiserial" title="Permalink to this headline">¶</a></h2>
+<p>STM32F103 Bluepill devices are known for their affordability and versatility. These microcontroller units (MCUs) can be easily configured to function as a virtual COM port, making them popular choices for various embedded systems and DIY projects.</p>
+<p>However, a peculiar design flaw limits the simultaneous use of the CAN (Controller Area Network) port and the Virtual COM port on these devices. This limitation poses a challenge for applications requiring both functionalities concurrently.</p>
+<p>To circumvent this limitation, I adopted a workaround solution: utilizing two STM32 devices instead of one. By dedicating one device to forward data to the serial port and another to forward this data to the virtual COM port, I effectively bypassed the restriction. Fortunately, the low cost of these Bluepill devices made this workaround feasible, despite the need for additional hardware.</p>
+<p>Although unconventional, this approach proved effective in achieving the desired functionality without compromising on cost-effectiveness. It underscores the adaptability and flexibility of STM32F103 Bluepill devices in addressing real-world constraints and challenges in embedded systems development.</p>
+<p><strong>The serial ports of the Orange Pi PC seemed limited to 115200 baud. When sampling 500k baud CAN traffic, this becomes a problem. The STM32 devices allow for higher baudrates. I modified the original STM32MultiSerial UART2 port to allow for higher baudrates.</strong></p>
+<p>on github is this stm32multiserial repository, which is also suited for the stm32f103c6 so stm32f103xx.</p>
+<p><a class="reference external" href="https://github.com/unkier/stm32multiserial">STM32MultiSerial GitHub Repository</a></p>
+<p>if all goes well this device will show up as  (dmesg)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span> <span class="m">6497</span>.544752<span class="o">]</span> usb <span class="m">3</span>-2: Product: STM32 Virtual ComPort
+<span class="o">[</span> <span class="m">6497</span>.544756<span class="o">]</span> usb <span class="m">3</span>-2: Manufacturer: STMicroelectronics
+<span class="o">[</span> <span class="m">6497</span>.544759<span class="o">]</span> usb <span class="m">3</span>-2: SerialNumber: 00000000001A
+<span class="o">[</span> <span class="m">6497</span>.550462<span class="o">]</span> cdc_acm <span class="m">3</span>-2:1.0: ttyACM0: USB ACM device
+<span class="o">[</span> <span class="m">6497</span>.551289<span class="o">]</span> cdc_acm <span class="m">3</span>-2:1.2: ttyACM1: USB ACM device
+</pre></div>
+</div>
+<p>in this case /dev/ttyACM0 and /dev/ttyACM1 will be usable as virtual com port</p>
+<p>this works together with the serial can :</p>
+<p><a class="reference external" href="https://github.com/walmis/stm32-slcan">STM32-SLCAN</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo modprobe can
+sudo modprobe can-raw
+sudo modprobe slcan
+sudo slcand -s5 -S2000000 /dev/ttyUSB0 can0 <span class="c1"># CAN Speed 5 -&gt;250 kBaud, 2,000,000 Baud serial</span>
+<span class="o">(</span>or<span class="o">)</span>
+su slcand -s4 -S2000000 /dev/ttyACM1 can0 <span class="c1">#125kBaud CAN and stm32multiserial device</span>
+ifconfig can0 up
+</pre></div>
+</div>
+<p><strong>the -S2000000 is the serial baudrate, which is very high, standard usb-uart devices might not be able to cope</strong></p>
+<img alt="_images/3xstm32_bb.png" src="_images/3xstm32_bb.png" />
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What is a SocketCAN Interface?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-socketcan-interface-stm32multiserial">Configuring SocketCAN interface : stm32multiserial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="stm/serial.html" title="previous chapter">using a serial port</a></li>
+      <li>Next: <a href="linux/index.html" title="next chapter">Linux at home</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/socketcan.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

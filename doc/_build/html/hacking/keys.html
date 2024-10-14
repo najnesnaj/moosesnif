@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Keys &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DBC (Database Container) Files: The Key to Decoding CAN Bus Messages" href="../dbc.html" />
+    <link rel="prev" title="Bootloaders" href="bootloaders.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="keys">
+<h1>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h1>
+<p>CEM EEPROM:</p>
+<p>From the xx256 MCU eeprom. I found based on some other forum posts where the keys are stored (transponder portion at least). They are each 4 bytes and there are a maximum of 6 keys that can be added to the car.</p>
+<p>YV1MS682442020566 MCU2 EEPROM (4K)</p>
+<p>I do not know if there are any checksums on this.</p>
+<p>Above you can see that the vehicle has 4 transponders/keys added, with two sets of 4 bytes blank for slots 5 and 6.  On the ICM display, if I go into the information section it also reports there are 4 keys.</p>
+<p>The keys I believe are ID48 Megamos transponders.</p>
+<section id="key-fob">
+<h2>Key Fob:<a class="headerlink" href="#key-fob" title="Permalink to this headline">¶</a></h2>
+<p>There is the active component that I believe transmits at 315MHz when you push the buttons. This is picked up by a receiver on top of the DIM (Cluster). The passive part is in the plastic housing, a small glass RFID transponder that when inserted into the ignition is verified.</p>
+<img alt="../_images/key1.png" src="../_images/key1.png" />
+<img alt="../_images/key2.png" src="../_images/key2.png" />
+</section>
+<section id="ignition-transponder-reader">
+<h2>Ignition Transponder Reader:<a class="headerlink" href="#ignition-transponder-reader" title="Permalink to this headline">¶</a></h2>
+<p>This is a 3 wire device, 12V, GND and LIN. The LIN bus is shared with the SCL (Steering Column Lock) module, which are both connected to the CEM.</p>
+<img alt="../_images/key3.png" src="../_images/key3.png" />
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canbus/index.html">Volvo CANBUS and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Hacking : modifying standard settings</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="checks.html">Checks between the ECM, CEM and BCM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootloaders.html">Bootloaders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootloaders.html#the-software-download-process">The software download process</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Hacking : modifying standard settings</a><ul>
+      <li>Previous: <a href="bootloaders.html" title="previous chapter">Bootloaders</a></li>
+      <li>Next: <a href="../dbc.html" title="next chapter">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/hacking/keys.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

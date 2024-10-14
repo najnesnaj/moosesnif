@@ -1,0 +1,26 @@
+    SELECT
+    T100_EcuVariant. identifier AS DiagNumber,
+    102_EcuType.identifier AS EcuTypeldentifier,
+    T101_Ecu.identifier AS Eculdentifier,
+    T121_Config.commAddress AS EcuAddress,
+    T100_EcuVariant.id AS EcuVariantid,
+    T102_EcuType.description AS EcuName,
+    T121_Config.id As Configid,
+    T121_Config.fkt121_Config_Gateway As GatewayConfigId,
+    T122_Protocol.id AS Protocolld
+    FROM
+    T100_EcuVariant
+    INNER JOIN
+    T101_Ecu ON T100_EcuVariant.fkT101_Ecu = T101_Ecu.id
+    INNER JOIN
+    T102_EcuType ON T101_Ecu.fkT102_EcuType
+    INNER JO1N
+    T120_Config_EcuVariant ON T100_EcuVariant.id = T120_Config_EcuVariant.fkT100_Ecu
+    Variant
+    INNER JOIN
+    T121_Config ON T120_Config_EcuVariant.fkT121_Config = T121_Config.id
+    INNER JOIN
+    T122_Protocol ON T121_Config.fkT122_pratocol
+    WHERE (T100_EcuVariant.id = @ecuVariantid)
+    ORDER BY Priority
+    

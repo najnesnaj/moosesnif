@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modules for profile &#8212; canbus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="further info on canbus:" href="webpage.html" />
+    <link rel="prev" title="overview modules" href="modules.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="modules-for-profile">
+<h1>Modules for profile<a class="headerlink" href="#modules-for-profile" title="Permalink to this headline">¶</a></h1>
+<p>In the file : /system/log/diagnostics/VIDA, is a lot of usefull info.</p>
+<p>For instance : vadis_GetallEcuDataForProfile 0b00c8af83f1a8fb.</p>
+<section id="executing-stored-procedure">
+<h2>executing stored procedure<a class="headerlink" href="#executing-stored-procedure" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>SELECT  DISTINCT</dt><dd><blockquote>
+<div><p>t121.commaddress as ecuaddress,
+t123.identifier as busid,
+t102.identifier as ecutype,
+t102.description ecuDescription,
+t100.identifier diagnosticnumber,
+t121.id as configId,
+t121.canidrx as canid,
+t121.fkT121_Config_Gateway as gatewayConfigId,
+t122.id as protocolid,
+t161.folderLevel as folderLevel,
+t121.priority as [priority]</p>
+</div></blockquote>
+<p>FROM      T120_Config_EcuVariant t120
+INNER JOIN</p>
+<blockquote>
+<div><p>T121_Config T121 ON T120.fkT121_Config = T121.id</p>
+</div></blockquote>
+<dl class="simple">
+<dt>INNER JOIN</dt><dd><p>T122_Protocol T122 ON T121.fkT122_protocol = T122.id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T100_EcuVariant T100 ON T120.fkT100_EcuVariant = T100.id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T160_DefaultEcuVariant T160 ON T100.id = T160.fkT100_EcuVariant</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T161_Profile T161 on T160.fkT161_Profile = T161.Id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T123_Bus t123 on T121.fkt123_bus = t123.id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T101_Ecu t101 on T100.fkt101_ecu = t101.id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>T102_EcuType t102 on t101.fkt102_ecutype = t102.id</p>
+</dd>
+<dt>INNER JOIN</dt><dd><p>dbo.GetCompatibleProfiles(‘0b00c8af83f1a8fb’) p on t161.id = p.id</p>
+</dd>
+<dt>WHERE</dt><dd><p>t102.identifier &lt;&gt; 0</p>
+</dd>
+</dl>
+<p>ORDER BY t161.folderLevel DESC, t121.priority ASC</p>
+</dd>
+</dl>
+</section>
+<section id="table-with-overview">
+<h2>table with overview<a class="headerlink" href="#table-with-overview" title="Permalink to this headline">¶</a></h2>
+<p>“ecuaddress”,”busid”,”ecutype”,”ecuDescription”,
+“diagnosticnumber”,”configId”,”gatewayConfigId”</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">EcuAddress for Model</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Address</p></th>
+<th class="head"><p>busid</p></th>
+<th class="head"><p>ecutype</p></th>
+<th class="head"><p>descript</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0B</p></td>
+<td><p>1</p></td>
+<td><p>254501</p></td>
+<td><p>ADM</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>1</p></td>
+<td><p>284101</p></td>
+<td><p>ECM</p></td>
+</tr>
+<tr class="row-even"><td><p>7B</p></td>
+<td><p>0</p></td>
+<td><p>372306</p></td>
+<td><p>AUU</p></td>
+</tr>
+<tr class="row-odd"><td><p>7C</p></td>
+<td><p>0</p></td>
+<td><p>394202</p></td>
+<td><p>BPM</p></td>
+</tr>
+<tr class="row-even"><td><p>2D</p></td>
+<td><p>0</p></td>
+<td><p>366901</p></td>
+<td><p>KVM</p></td>
+</tr>
+<tr class="row-odd"><td><p>63</p></td>
+<td><p>0</p></td>
+<td><p>366902</p></td>
+<td><p>PAM</p></td>
+</tr>
+<tr class="row-even"><td><p>52</p></td>
+<td><p>0</p></td>
+<td><p>372301</p></td>
+<td><p>AEM</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>0</p></td>
+<td><p>372304</p></td>
+<td><p>CEM</p></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>0</p></td>
+<td><p>381101</p></td>
+<td><p>DIM</p></td>
+</tr>
+<tr class="row-odd"><td><p>6D</p></td>
+<td><p>0</p></td>
+<td><p>393202</p></td>
+<td><p>AUD</p></td>
+</tr>
+<tr class="row-even"><td><p>75</p></td>
+<td><p>0</p></td>
+<td><p>393204</p></td>
+<td><p>IAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>71</p></td>
+<td><p>0</p></td>
+<td><p>393205</p></td>
+<td><p>RDAR</p></td>
+</tr>
+<tr class="row-even"><td><p>54</p></td>
+<td><p>0</p></td>
+<td><p>393901</p></td>
+<td><p>ICM</p></td>
+</tr>
+<tr class="row-odd"><td><p>66</p></td>
+<td><p>0</p></td>
+<td><p>393906</p></td>
+<td><p>MMM</p></td>
+</tr>
+<tr class="row-even"><td><p>64</p></td>
+<td><p>0</p></td>
+<td><p>394201</p></td>
+<td><p>PHM</p></td>
+</tr>
+<tr class="row-odd"><td><p>68</p></td>
+<td><p>0</p></td>
+<td><p>395301</p></td>
+<td><p>SUB</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>0</p></td>
+<td><p>831701</p></td>
+<td><p>DDM</p></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>0</p></td>
+<td><p>831703</p></td>
+<td><p>PDM</p></td>
+</tr>
+<tr class="row-even"><td><p>2E</p></td>
+<td><p>0</p></td>
+<td><p>852601</p></td>
+<td><p>PSM</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>0</p></td>
+<td><p>871101</p></td>
+<td><p>CCM</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>0</p></td>
+<td><p>875401</p></td>
+<td><p>CPM</p></td>
+</tr>
+<tr class="row-odd"><td><p>58</p></td>
+<td><p>0</p></td>
+<td><p>884701</p></td>
+<td><p>SRS</p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>0</p></td>
+<td><p>892901</p></td>
+<td><p>TRM</p></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>1</p></td>
+<td><p>352902</p></td>
+<td><p>HCM</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>1</p></td>
+<td><p>372302</p></td>
+<td><p>CEM</p></td>
+</tr>
+<tr class="row-odd"><td><p>01</p></td>
+<td><p>1</p></td>
+<td><p>593102</p></td>
+<td><p>BCM</p></td>
+</tr>
+<tr class="row-even"><td><p>49</p></td>
+<td><p>1</p></td>
+<td><p>641901</p></td>
+<td><p>SWM</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>1</p></td>
+<td><p>645901</p></td>
+<td><p>EPS</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">canbus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Volvo CANBUS and Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="volvo-canbus.html">Volvo Canbus OBD2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volvo-modules.html">Volvo V50 modules overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volvo-modules.html#modules">Modules:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">overview modules</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modules for profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpage.html">further info on canbus:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpage.html#volvo-uses-extended-identifiers">Volvo uses extended identifiers:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Volvo Diagnostic Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vidadatabase/index.html">Analysis of the MSQL VIDA database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoding.html">decoding explained:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vin.html">Reading the VIN (Vehicle Identification Number)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../volvo-diagnostic.html">Volvo Diagnostic messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../makingsense/index.html">Making sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/index.html">Hacking : modifying standard settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dbc.html">DBC (Database Container) Files: The Key to Decoding CAN Bus Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmoose.html">Openmoose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../candump.html">using    candump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apb.html">baud &amp; bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stm/index.html">STM microcontrollers used with CAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../socketcan.html">What is a SocketCAN Interface?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux at home</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Volvo CANBUS and Modules</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">overview modules</a></li>
+      <li>Next: <a href="webpage.html" title="next chapter">further info on canbus:</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Jan Jansen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/canbus/ecutabel.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
