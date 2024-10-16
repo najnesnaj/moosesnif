@@ -6,6 +6,8 @@ In the file : /system/log/diagnostics/VIDA, is a lot of usefull info.
 For instance : vadis_GetallEcuDataForProfile 0b00c8af83f1a8fb.
 
 
+
+
 executing stored procedure
 --------------------------
 
